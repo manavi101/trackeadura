@@ -1,0 +1,20 @@
+{
+  "name": "trackeadura-api",
+  "version": "0.1.0",
+  "description": "Trackeadura API backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "server": "nodemon index.js",
+  "author": "Matias Villalba & Ignacio Parra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
