@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
-import HeaderComponent from './components/header'
+import HeaderComponent from './components/header';
+import Profile from './components/profile';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
@@ -62,7 +63,7 @@ const App = () => {
               minHeight: 280,
             }}
           >
-            Content
+            <Profile/>
           </Content>
         </Layout>
       </Layout>
@@ -73,7 +74,7 @@ const App = () => {
 const styles = {
   header: {
     backgroundColor:'#001529',
-    
+
   }
 }
 
