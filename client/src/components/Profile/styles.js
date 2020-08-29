@@ -4,17 +4,6 @@ const styles = {
         borderRadius:15,
         padding:15
     },
-    userStats1:{
-        color:'#ccc'
-    },
-    userStats2:{
-        color:'#fff',
-        fontSize:16,
-        fontWeight:'bold'
-    },
-    userStatContainer:{
-        padding:5
-    },
     matchHistoryContainer: {
         backgroundColor:'#282a4a',
         borderRadius:15,

@@ -14,11 +14,11 @@ const Profile = () => {
 
     return(
             <Row gutter={[10,10]}>
-                <Col span={5}>
+                <Col md={10} xs={24} lg={8} xl={6}>
                         <Row>{userBox()}</Row>
                         <Row style={{paddingTop:10}}>{userBox()}</Row>
                 </Col>
-                <Col span={19}>
+                <Col md={14} xs={24} lg={16} xl={18}>
                         {matchHistoryTop()}
                         {matchHistoryBottom()}
                 </Col>
