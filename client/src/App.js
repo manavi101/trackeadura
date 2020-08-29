@@ -3,7 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
 <<<<<<< HEAD
 import HeaderComponent from './components/header/header';
-import Profile from './components/profile';
+import Profile from './components/Profile';
 =======
 import HeaderComponent from './components/header';
 import Profile from './components/Profile';
