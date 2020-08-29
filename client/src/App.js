@@ -1,13 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
-<<<<<<< HEAD
 import HeaderComponent from './components/header/header';
 import Profile from './components/Profile';
-=======
-import HeaderComponent from './components/header';
-import Profile from './components/Profile';
->>>>>>> 89149b8c5090ffc68bccd7137ed06d75b49827db
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
