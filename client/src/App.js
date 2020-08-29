@@ -1,12 +1,10 @@
 import React,{useState,useEffect} from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import {Layout} from 'antd';
 import 'antd/dist/antd.css';
-import HeaderComponent from './components/header/header';
+import Header from './components/Header';
 import Profile from './components/Profile';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
-const { SubMenu } = Menu;
-const { Header,Sider,Content,Footer } = Layout
+const { Content } = Layout
 
 const App = () => {
 
@@ -18,9 +16,7 @@ const App = () => {
 
   return (
     <Layout>
-      <Header style={styles.header}>
-        <HeaderComponent/>
-      </Header>
+      <Header/>
       <Layout>
         <Layout style={{ padding: '0 24px 24px' }}>
           <Content
@@ -39,11 +35,5 @@ const App = () => {
   );
 }
 
-const styles = {
-  header: {
-    backgroundColor:'#0c365f',
-
-  }
-}
 
 export default App;
