@@ -30,7 +30,7 @@ const MatchOverview = () => {
     return (
         <Row align="middle" style={matchData.matchWin ? styles.containerWin : styles.containerLoss}>
             <Col span={3} style={styles.agentImageContainer}>
-                <Image src={matchData.agentUri} />
+                <Image src={matchData.agentUri} preview={false}/>
             </Col>
             <Col span={4}>
                 <Row style={styles.boldText}>{matchData.matchResult}</Row>
