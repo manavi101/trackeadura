@@ -1,27 +1,23 @@
-import React from './node_modules/react';
+import React from 'react';
 import {WindowSize} from '../../utils/actions'
 import HeaderDesktop from './HeaderDesktop'
 import HeaderMobile from './HeaderMobile'
 
-const HeaderComponent = () => {
+const Header = () => {
     const size = WindowSize()
 
     return(
-        size.width > 768 ?<HeaderDesktop/>:<HeaderMobile/>
+        <div style={styles.header}>
+            {size.width > 768 ?<HeaderDesktop/>:<HeaderMobile/>}
+        </div>
     )   
 }
 
 const styles = {
-    headerContainer:{
-        height:64
-    },
-    headerLogoContainer: {
-    },
-    headerLogo:{
-        color:'#fff',
-        fontSize:20,
-        fontWeight:'bold'
+    header: {
+        backgroundColor:'#465775',
+        height:'65px'
     }
 }
 
-export default HeaderComponent;
+export default Header;
