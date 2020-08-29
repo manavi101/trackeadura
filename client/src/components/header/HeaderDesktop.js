@@ -1,5 +1,5 @@
-import React from 'react';
-import {Row,Col,Button} from 'antd';
+import React from './node_modules/react';
+import {Row,Col,Button} from './node_modules/antd';
 import styles from './HeaderDesktop.module.css';
 
 const HeaderDesktop = () => {

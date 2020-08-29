@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import {WindowSize} from '../../utils/actions'
 import HeaderDesktop from './HeaderDesktop'
 import HeaderMobile from './HeaderMobile'

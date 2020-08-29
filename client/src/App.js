@@ -1,12 +1,10 @@
 import React,{useState,useEffect} from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import {Layout} from 'antd';
 import 'antd/dist/antd.css';
-import HeaderComponent from './components/header/header';
+import HeaderComponent from './components/Header';
 import Profile from './components/Profile';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
-const { SubMenu } = Menu;
-const { Header,Sider,Content,Footer } = Layout
+const { Header,Content } = Layout
 
 const App = () => {
 

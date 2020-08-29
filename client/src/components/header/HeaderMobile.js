@@ -1,5 +1,5 @@
-import React, {useEffect,useState} from 'react';
-import {Menu,Space} from 'antd';
+import React, {useEffect,useState} from './node_modules/react';
+import {Space} from './node_modules/antd';
 
 const HeaderMobile = () => {
 
