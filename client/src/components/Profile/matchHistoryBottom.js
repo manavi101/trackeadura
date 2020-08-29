@@ -8,11 +8,13 @@ import styles from './styles';
 
 const matchHistoryBottom = () => {
     return (
-            <Row style={styles.matchHistoryContainer2}>
-                <Col span={6}></Col>
-                <Col span={6}></Col>
-                <Col span={6}></Col>
-                <Col span={6}></Col>
+            <Row style={{paddingTop:10}}>
+                <Col span={24} style={styles.matchHistoryContainer2}>
+                    <Col span={6}></Col>
+                    <Col span={6}></Col>
+                    <Col span={6}></Col>
+                    <Col span={6}></Col>
+                </Col>
             </Row>
     )
 }

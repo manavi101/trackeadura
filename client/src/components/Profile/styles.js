@@ -4,33 +4,6 @@ const styles = {
         borderRadius:15,
         padding:15
     },
-    avatarContainer: {
-    },
-    usernameContainer:{
-    },
-    username:{
-        color:'#fff',
-        fontSize:20,
-        fontWeight:'bold'
-    },
-    lastPlayed:{
-        color:'#ccc',
-        fontSize:16
-    },
-    rankContainer:{
-        width:'100%',
-    },
-    rankImageContainer:{
-        //width:'50%',
-        flex:1,
-    },
-    rankName:{
-        color:'#c21717',
-        fontSize:16,
-        fontWeight:'500'
-    },
-    userStatsContainer:{
-    },
     userStats1:{
         color:'#ccc'
     },
@@ -70,7 +43,7 @@ const styles = {
         height:1000,
         backgroundColor:'#282a4a',
         borderRadius:15,
-        padding:15
+        padding:15,
 
     }
 }

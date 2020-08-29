@@ -9,7 +9,7 @@ import styles from './styles';
 const matchHistoryTop = () => {
     return (
             <Row style={styles.matchHistoryContainer}>
-                <Col span={18}>
+                <Col span={18} >
                     <Row>
                         <Col span={6}>
                             <Row style={styles.matchHistoryTopText1}>19W 13L</Row>

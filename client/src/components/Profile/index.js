@@ -4,6 +4,7 @@ import {
     Col,
 } from 'antd';
 import styles from './styles';
+import Container from '../UI/container';
 
 import matchHistoryBottom from './matchHistoryBottom';
 import matchHistoryTop from './matchHistoryTop';
@@ -14,16 +15,12 @@ const Profile = () => {
     return(
             <Row gutter={[10,10]}>
                 <Col span={5}>
-                    <Row>
-                        <Col span={24}>{userBox()}</Col>
-                        <Col span={24} style={{paddingTop:10}}>{userBox()}</Col>
-                    </Row>
+                        <Row>{userBox()}</Row>
+                        <Row style={{paddingTop:10}}>{userBox()}</Row>
                 </Col>
                 <Col span={19}>
-                    <Row>
-                        <Col span={24}>{matchHistoryTop()}</Col>
-                        <Col span={24} style={{paddingTop:10}}>{matchHistoryBottom()}</Col>
-                    </Row>
+                        {matchHistoryTop()}
+                        {matchHistoryBottom()}
                 </Col>
             </Row>
     )
