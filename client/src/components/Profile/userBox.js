@@ -1,24 +1,43 @@
 import React, {useEffect,useState} from 'react';
+import { useSelector } from 'react-redux';
 import {
     Divider,
     Row,
     Col,
+    Spin,
+    Skeleton
 } from 'antd';
 import AvatarUsername from '../UI/avatarUsername';
 import styles from './styles';
 import RankDisplay from '../UI/rankDisplay';
 import UserStats from './userStats';
 
-const userBox = () => {
-    return (
+const UserBox = (props) => {
+
+    const [userData,setUserData] = useState(null);
+    
+    useEffect(()=>{
+        if(props.userData)
+            setUserData(props.userData)
+    },[])
+
+    let userBox;
+    userData ? userBox = (
         <Col span={24} style={styles.userBoxContainer}>
-            <AvatarUsername username={"parradura#LAS"} lowerText={"Last played: 2hrs ago"} avatarUri={process.env.PUBLIC_URL + 'images/profile/generic-profile-icon.png'}/>
+            <AvatarUsername username={userData.username} lowerText={userData.lastPlayed} avatarUri={userData.avatarUri}/>
             <Divider/>
-            <RankDisplay rankUri={process.env.PUBLIC_URL + 'images/ranks/Immortal1.svg'} rankName={"Immortal 1"}/>
+            <RankDisplay rankUri={userData.rankUri} rankName={userData.rankName}/>
             <Divider/>
-            <UserStats />
+            <UserStats userStats={userData.userStats}/>
+        </Col>
+    ) 
+    : userBox = (
+        <Col span={24} style={styles.userBoxContainer}>
+            <Skeleton avatar active round paragraph={{ rows: 4 }} avatar={{active:true}}/>
         </Col>
     )
+
+    return userBox;
 }
 
-export default userBox;
+export default UserBox;

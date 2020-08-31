@@ -2,35 +2,26 @@ import React, {useEffect,useState} from 'react';
 import {
     Row,
     Col,
-    Image
+    Image,
+    Spin
 } from 'antd';
 
-const MatchOverview = () => {
-
-    const dataJson = {
-        matchResult:"13-9",
-        matchWin:true,
-        userPosition:"1st",
-        userKDA:"2.28",
-        userKDA2:"27/12/5",
-        userKPR:"2.89",
-        userADR:"238",
-        userCombatScore:"432",
-        matchDuration:"37:56",
-        matchModeMap:"Competitive - Bind",
-        agentUri:process.env.PUBLIC_URL + 'images/agents/omen-concept-headshot.png'
-    }
+const MatchOverview = (props) => {
 
     const [matchData,setMatchData] = useState({})
 
     useEffect(()=>{
-        setMatchData(dataJson)
+        if(props.matchData)
+            setMatchData(props.matchData)
     },[])
 
-    return (
-        <Row align="middle" style={matchData.matchWin ? styles.containerWin : styles.containerLoss}>
+    let matchOverview;
+    matchData ? matchOverview = (
+        <Row align="middle" style={styles.container}>
             <Col span={3} style={styles.agentImageContainer}>
-                <Image src={matchData.agentUri} preview={false}/>
+                <div>
+                    <img src={matchData.agentUri} style={{borderRadius:15}}/>
+                </div>
             </Col>
             <Col span={4}>
                 <Row style={styles.boldText}>{matchData.matchResult}</Row>
@@ -53,23 +44,17 @@ const MatchOverview = () => {
                 <Row style={styles.defaultText}>{matchData.matchModeMap}</Row>
             </Col>
         </Row>
-    )
+    ) : matchOverview = <Spin/>
+
+    return matchOverview;
 }
 
 export default MatchOverview;
 
 const styles = {
-    containerWin:{
+    container:{
         backgroundColor:"#141221",
         borderRadius:15,
-        borderLeftColor:'green',
-        borderLeftWidth:3
-    },
-    containerLoss:{
-        backgroundColor:"#141221",
-        borderRadius:15,
-        borderLeftColor:'red',
-        borderLeftWidth:3
     },
     agentImageContainer: {
         borderRadius:15

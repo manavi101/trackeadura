@@ -7,20 +7,26 @@ import styles from './styles';
 
 import MatchOverview from './matchOverview';
 
-const matchHistoryBottom = () => {
+const MatchHistoryBottom = (props) => {
+
+    const [matchHistory,setMatchHistory] = useState([]);
+
+    useEffect(()=>{
+        if(props.matchHistory)
+            setMatchHistory(props.matchHistory)
+    },[])
+    
     return (
             <Row style={{paddingTop:10}} >
                 <Col span={24} style={styles.matchHistoryContainer2}>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
-                    <Row style={{paddingTop:10}}><Col span={24}><MatchOverview/></Col></Row>
+                    {matchHistory.map((item,index)=>{
+                        return(
+                            <Row style={{paddingTop:10}} key={index}><Col span={24}><MatchOverview matchData={item}/></Col></Row>
+                        )
+                    })}
                 </Col>
             </Row>
     )
 }
 
-export default matchHistoryBottom;
+export default MatchHistoryBottom;
