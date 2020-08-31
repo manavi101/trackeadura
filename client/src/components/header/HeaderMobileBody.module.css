@@ -1,0 +1,37 @@
+.headerColSignIn{
+    text-align: right;
+    margin:auto;
+}
+.headerSignInButton{
+    color:#fff;
+    font-weight:bold;
+    font-size: 12px;
+    height: 100%;
+}
+.headerSignInButton:hover {
+    color:#EF6F6C;
+}
+.headerColLogo{
+    margin:auto;
+}
+.headerLogo{
+    color:#fff;
+    font-size:16;
+    font-Weight:bold;
+    margin:auto;
+    padding-left: 2px;
+}
+
+.headerSearchBarColAppearButton{
+    padding: 4px;
+    margin:auto;
+    text-align: right;
+}
+.headerSearchBarAppearButton{
+    color: #fff;
+    height: 100%;
+}
+.headerRow{
+    background-color:#465775;
+    height:60px;
+}

@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {Layout} from 'antd';
 import 'antd/dist/antd.css';
-import Header from './components/header';
+import Header from './components/Header';
 import Profile from './components/Profile';
 
 const { Content } = Layout

@@ -7,17 +7,11 @@ const Header = () => {
     const size = WindowSize()
 
     return(
-        <div style={styles.header}>
+        <div className="Header">
             {size.width > 768 ?<HeaderDesktop/>:<HeaderMobile/>}
         </div>
     )   
 }
 
-const styles = {
-    header: {
-        backgroundColor:'#465775',
-        height:'65px'
-    }
-}
 
 export default Header;
