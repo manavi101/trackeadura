@@ -1,0 +1,36 @@
+.background {
+    background-color: #111;
+    height: 100%;
+}
+.searchBar{
+    height: 38px;
+    border-radius: 12px;
+    background-color: #eee;
+}
+.searchBarColInput{
+    padding: 4px;
+}
+.searchBarInput{
+    color: #111;
+}
+.searchBarColButton{
+    padding: 3px;
+}
+.searchBarButton{
+    color: #111;
+}
+.searchBarDivider{
+    height: 100%;
+}
+.searchBarColDivider{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.colSearchBar{
+    margin:auto;
+}
+.title{
+    font-weight: bolder;
+    color: #eee;
+    font-size: 72px;
+}

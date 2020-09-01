@@ -14,13 +14,9 @@ import UserStats from './userStats';
 
 const UserBox = (props) => {
 
-    const [userData,setUserData] = useState(null);
-    
-    useEffect(()=>{
-        if(props.userData)
-            setUserData(props.userData)
-    },[])
+    const userData = useSelector(state => state.profileReducer.profileData.userData);
 
+    
     let userBox;
     userData ? userBox = (
         <Col span={24} style={styles.userBoxContainer}>

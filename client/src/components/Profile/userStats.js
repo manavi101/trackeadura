@@ -5,18 +5,13 @@ import {
     Spin,
 } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import {useSelector} from 'react-redux';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const UserStats = (props) => {
     
-    const [stats, setStats] = useState({})
-
-    useEffect(()=>{
-        if(props.userStats)
-            setStats(props.userStats)
-    },[])
-
+    const stats = useSelector(state => state.profileReducer.profileData.userData.userStats);
 
     return (
         <Row align="top" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={styles.userStatsContainer}>

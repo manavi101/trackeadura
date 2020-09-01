@@ -1,5 +1,5 @@
 // PROFILE
 
 export {
-    changeValue
+    setProfileData
 } from '../components/Profile/actions.js';

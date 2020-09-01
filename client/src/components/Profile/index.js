@@ -8,28 +8,35 @@ import {
 import MatchHistoryBottom from './matchHistoryBottom';
 import matchHistoryTop from './matchHistoryTop';
 import UserBox from './userBox';
-import {changeValue} from '../../actions/index';
+import {setProfileData} from '../../actions/index';
 import profileData from './data';
 
-const Profile = () => {
+const Profile = (props) => {
 
     const dispatch = useDispatch()
-    const profileDataRed = useSelector(state => state.profileReducer.profileData);
+    //const _profileData = useSelector(state => state.profileReducer.profileData);
 
     useEffect(()=>{
-        dispatch(changeValue(profileData))
-        console.log('profileData: ',profileDataRed)
+        console.log('ID: ',props.match.params.userId)
+        let _profileData = profileData;
+        _profileData.userData.username = props.match.params.userId
+        _profileData.userData.tagLine = '#'+props.match.params.tagLine
+        dispatch(setProfileData(_profileData))
     },[])
 
+/*     useEffect(()=>{
+        dispatch(setProfileData({}))
+    },[]) */
+    
     return(
             <Row gutter={[10,10]}>
                 <Col md={10} xs={24} lg={8} xl={6}>
                         <Row>
                             <UserBox userData={profileData.userData}/>
                         </Row>
-                        <Row style={{paddingTop:10}}>
+                      {/*   <Row style={{paddingTop:10}}>
                             <UserBox userData={profileData.userData}/>
-                        </Row>
+                        </Row> */}
                 </Col>
                 <Col md={14} xs={24} lg={16} xl={18}>
                         {matchHistoryTop()}

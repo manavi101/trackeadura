@@ -5,16 +5,20 @@ import {
     Typography,
     Avatar
 } from 'antd';
+import {useSelector} from 'react-redux';
 
 const AvatarUsername = (props) => {
+
+    const userData = useSelector(state => state.profileReducer.profileData.userData);
+    
     return (
         <Row gutter={10,10} justify={"start"}>
             <Col style={styles.avatarContainer}>
-                <Avatar size={75} gap={5} src={props.avatarUri}/>  
+                <Avatar size={75} gap={5} src={userData.avatarUri}/>  
             </Col>
             <Col style={styles.nameContainer}>
-                <Typography style={styles.username}>{props.username}</Typography>
-                <Typography style={styles.lowerText}>{props.lowerText}</Typography>
+                <Typography style={styles.username}>{userData.username}{userData.tagLine}</Typography>
+                <Typography style={styles.lowerText}>{userData.lastPlayed}</Typography>
             </Col>
         </Row>
     )

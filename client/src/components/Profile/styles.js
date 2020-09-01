@@ -29,7 +29,7 @@ const styles = {
         fontWeight:'500'
     },
     matchHistoryContainer2: {
-        height:1000,
+        //height:1000,
         backgroundColor:'#282a4a',
         borderRadius:15,
         padding:15,

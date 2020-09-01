@@ -3,12 +3,16 @@ import {
     Row,
     Col,
     Image,
-    Spin
+    Spin,
+    Avatar
 } from 'antd';
+import styles from './matchOverview.module.css';
+import { WindowSize } from '../../utils/actions';
 
 const MatchOverview = (props) => {
 
     const [matchData,setMatchData] = useState({})
+    const size = WindowSize()
 
     useEffect(()=>{
         if(props.matchData)
@@ -17,31 +21,31 @@ const MatchOverview = (props) => {
 
     let matchOverview;
     matchData ? matchOverview = (
-        <Row align="middle" style={styles.container}>
-            <Col span={3} style={styles.agentImageContainer}>
-                <div>
-                    <img src={matchData.agentUri} style={{borderRadius:15}}/>
+        <Row align="middle" style={styles2.container}>
+            <Col span={3} style={styles2.agentImageContainer}>
+                <div style={{borderRadius:15}}>
+                    <Avatar src={matchData.agentUri} className={styles.agentImage} size={size.width / 15} shape="square"/>
                 </div>
             </Col>
             <Col span={4}>
-                <Row style={styles.boldText}>{matchData.matchResult}</Row>
-                <Row style={styles.position}>{matchData.userPosition}</Row>
+                <Row style={styles2.boldText}><p>{matchData.matchResult}</p></Row>
+                <Row style={styles2.position}><p>{matchData.userPosition}</p></Row>
             </Col>
             <Col span={4}>
-                <Row style={styles.boldText}>{matchData.userKDA} KD</Row>
-                <Row style={styles.defaultText}>{matchData.userKDA2}</Row>
+                <Row style={styles2.boldText}><p>{matchData.userKDA} KD</p></Row>
+                <Row style={styles2.defaultText}><p>{matchData.userKDA2}</p></Row>
             </Col>
             <Col span={3}>
-                <Row style={styles.boldText}>{matchData.userKPR} KPR</Row>
-                <Row style={styles.defaultText}>{matchData.userADR} ADR</Row>
+                <Row style={styles2.boldText}><p>{matchData.userKPR} KPR</p></Row>
+                <Row style={styles2.defaultText}><p>{matchData.userADR} ADR</p></Row>
             </Col>
             <Col span={5}>
-                <Row style={styles.boldText}>{matchData.userCombatScore} Combat Score</Row>
-                <Row style={styles.defaultText}>{"-"}</Row>
+                <Row style={styles2.boldText}><p>{matchData.userCombatScore} Combat Score</p></Row>
+                <Row style={styles2.defaultText}><p>{"-"}</p></Row>
             </Col>
             <Col span={5}>
-                <Row style={styles.defaultText}>{matchData.matchDuration}</Row>
-                <Row style={styles.defaultText}>{matchData.matchModeMap}</Row>
+                <Row style={styles2.defaultText}><p>{matchData.matchDuration}</p></Row>
+                <Row style={styles2.defaultText}><p>{matchData.matchModeMap}</p></Row>
             </Col>
         </Row>
     ) : matchOverview = <Spin/>
@@ -51,7 +55,7 @@ const MatchOverview = (props) => {
 
 export default MatchOverview;
 
-const styles = {
+const styles2 = {
     container:{
         backgroundColor:"#141221",
         borderRadius:15,
@@ -61,12 +65,12 @@ const styles = {
     },
     defaultText:{
         color:"#bbb",
-        fontSize:16
+        fontSize:"1vw"
     },
     boldText:{
         color:"#fff",
         fontWeight:"bold",
-        fontSize:18
+        fontSize:"1.3vw"
     },
     position: {
         color:"#ab9924",

@@ -4,24 +4,27 @@ import {
     Col,
 } from 'antd';
 import styles from './styles';
+import {WindowSize} from '../../utils/actions';
+import {useSelector} from 'react-redux';
 
 import MatchOverview from './matchOverview';
+import MatchOverviewMobile from './matchOverviewMobile';
 
 const MatchHistoryBottom = (props) => {
 
-    const [matchHistory,setMatchHistory] = useState([]);
+    const matchHistory = useSelector(state => state.profileReducer.profileData.matchHistory) || [];
+    const size = WindowSize()
 
-    useEffect(()=>{
-        if(props.matchHistory)
-            setMatchHistory(props.matchHistory)
-    },[])
-    
     return (
             <Row style={{paddingTop:10}} >
                 <Col span={24} style={styles.matchHistoryContainer2}>
                     {matchHistory.map((item,index)=>{
                         return(
-                            <Row style={{paddingTop:10}} key={index}><Col span={24}><MatchOverview matchData={item}/></Col></Row>
+                            <Row style={{paddingTop:10}} key={index}>
+                                <Col span={24}>
+                                    {size.width > 991 ? <MatchOverview matchData={item}/> : <MatchOverviewMobile matchData={item}/> }
+                                </Col>
+                            </Row>
                         )
                     })}
                 </Col>
