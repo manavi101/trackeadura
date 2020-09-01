@@ -1,14 +1,18 @@
-@keyframes SearchBarAppear {
+/*@keyframes SearchBarAppear {
     0% {
-        transform: translateY(-60px);
+        transform: translateY(-200%);
+        position: sticky;
+        top:0;
     } 
     100% {
-      transform: translateY(0px);
+      transform: translateY(0%);
+      position: sticky;
+      top:0;
     }
-  }
+  }*/
 .headerSearchBar{
-    animation-name: SearchBarAppear;
-    animation-duration: 400ms;
+    /*animation-name: SearchBarAppear;
+    animation-duration: 400ms;*/
     height: 60px;
     background-color: slategrey;
 }

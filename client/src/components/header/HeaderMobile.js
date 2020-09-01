@@ -5,10 +5,13 @@ import HeaderMobileSearchBar from './HeaderMobileSearchBar.js';
 const HeaderMobile = () => {
     const [ShowSearch, setShowSearch] = useState(null);
 
-        return(ShowSearch ? <HeaderMobileSearchBar setShowSearch={setShowSearch}/> :  <HeaderMobileBody setShowSearch={setShowSearch}/>)
+        return(
+            <div>
+                {ShowSearch ? <HeaderMobileSearchBar setShowSearch={setShowSearch}/> :  <HeaderMobileBody setShowSearch={setShowSearch}/>}
+            </div>
+        )
        
 }
-
 
 
 export default HeaderMobile;

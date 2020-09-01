@@ -18,22 +18,17 @@ const App = () => {
   },[])
 
   return (
-    <Layout>
-      <Header/>
-      <Layout >
-        <Layout style={styles.backgroundImage}>
-          <Content
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-              backgroundColor:"rgba(11, 0, 31, 0.75)"
-            }}
-          >
-            <Profile/>
-          </Content>
-        </Layout>
+    <Layout style={styles.backgroundImage}>
+      <Layout className="site-layout-background"
+        style={{
+          margin: 0,
+          minHeight: 280,
+          backgroundColor:"rgba(11, 0, 31, 0.75)"
+        }}>
+        <Header/>
+        <Content style={{padding: 24}}>
+          <Profile/>
+        </Content>
       </Layout>
     </Layout>
   );
