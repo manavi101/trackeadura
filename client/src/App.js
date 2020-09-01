@@ -16,20 +16,6 @@ const App = () => {
   const [valor, setValor] = useState(null)
 
   useEffect(()=>{
-    const pene = async () => {
-      await fetch("https://valorant.iesdev.com/match/fc0f645d-91e7-41bf-b1ba-d41eb82183db", {
-      "credentials": "omit",
-      "headers": {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0",
-          "Accept": "application/json, text/plain, */*",
-          "Accept-Language": "es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3"
-      },
-      "referrer": "https://blitz.gg/valorant/match/parradura-las/fc0f645d-91e7-41bf-b1ba-d41eb82183db",
-      "method": "GET",
-      "mode": "cors"
-  });
-    }
-    pene()
     //console.log('value',value)
   },[])
 
