@@ -4,7 +4,7 @@ import {
     Row,
     Col,
 } from 'antd';
-
+import Header from '../Header';
 import MatchHistoryBottom from './matchHistoryBottom';
 import matchHistoryTop from './matchHistoryTop';
 import UserBox from './userBox';
@@ -30,6 +30,9 @@ const Profile = (props) => {
 
     if(!loading)
         return(
+            <div style={{backgroundColor:'#111'}}>
+                <Header/>
+                <div style={{paddingTop: 24,paddingLeft:5,paddingRight:5,paddingBottom:24}}>
                 <Row gutter={[10,10]}>
                     <Col md={10} xs={24} lg={8} xl={6}>
                             <Row>
@@ -41,6 +44,8 @@ const Profile = (props) => {
                             <MatchHistoryBottom/>
                     </Col>
                 </Row>
+                </div>
+            </div>
         )
     else return null
 }

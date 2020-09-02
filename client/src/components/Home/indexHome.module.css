@@ -32,5 +32,10 @@
 .title{
     font-weight: bolder;
     color: #eee;
-    font-size: 72px;
+    font-size: 102px;
+}
+@media only screen and (max-width: 768px) {
+    .title{
+        font-size: 50px
+    }
 }
