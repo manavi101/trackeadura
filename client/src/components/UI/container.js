@@ -7,7 +7,7 @@ import {
 const Container = (props) => {
     return (
         <Row style={styles.outerContainer}>
-            <Col span={24} style={styles.innerContainer}>
+            <Col span={20} style={styles.innerContainer}>
                 {props.children}
             </Col>
         </Row>

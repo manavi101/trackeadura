@@ -10,7 +10,7 @@
 .searchBarColInput{
     padding: 4px;
 }
-.searchBarInput{
+.searchBarInputUsername{
     color: #111;
 }
 .searchBarColButton{
@@ -34,8 +34,27 @@
     color: #eee;
     font-size: 102px;
 }
+.tagCol{
+    display: flex;
+    align-items: center;
+    background: rgba(7, 14, 29, 0.1);
+    border-radius: 6px;
+    margin-left: 20px;
+    
+}
+.tagCol:focus-within{
+    display: flex;
+    align-items: center;
+    background: rgba(7, 14, 29, 0.6);
+    border-radius: 6px;
+    margin-left: 20px;
+}
+.searchBarInputTag:focus-within{
+    color:#eee
+}
 @media only screen and (max-width: 768px) {
     .title{
         font-size: 50px
     }
 }
+

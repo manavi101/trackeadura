@@ -70,7 +70,7 @@ const Home = (props) => {
                                                                 <Input
                                                                     name="username"
                                                                     placeholder="Username"
-                                                                    className={styles.searchBarInput}
+                                                                    className={styles.searchBarInputUsername}
                                                                     bordered={false}
                                                                     value={state.username}
                                                                     onChange={handleInputChange}
@@ -79,7 +79,7 @@ const Home = (props) => {
                                                                 />
                                                             </Form.Item>
                                                         </Col>
-                                                        <Col span={8}>
+                                                        <Col span={8} className={styles.tagCol}>
                                                             <Form.Item>
                                                                 <Input
                                                                     name="tagLine"
@@ -88,7 +88,7 @@ const Home = (props) => {
                                                                     placeholder="#TAG"
                                                                     value={state.tagLine}
                                                                     onChange={handleInputChange}
-                                                                    className={styles.searchBarInput}
+                                                                    className={styles.searchBarInputTag}
                                                                     bordered={false}
                                                                     onPressEnter={handleSubmit}
                                                                 />
