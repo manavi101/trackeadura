@@ -85,7 +85,6 @@ const Home = (props) => {
                                                             //prefix={"#"}
                                                             ref={tagInputRef}
                                                             placeholder="#TAG"
-                                                            autoCapitalize={true}
                                                             value={state.tagLine}
                                                             onChange={handleInputChange}
                                                             className={styles.searchBarInput}

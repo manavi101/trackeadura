@@ -14,36 +14,35 @@ import profileData from './data';
 const Profile = (props) => {
 
     const dispatch = useDispatch()
-    //const _profileData = useSelector(state => state.profileReducer.profileData);
+    const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
-        console.log('ID: ',props.match.params.userId)
-        let _profileData = profileData;
-        _profileData.userData.username = props.match.params.userId
-        _profileData.userData.tagLine = '#'+props.match.params.tagLine
-        dispatch(setProfileData(_profileData))
+        const setData = async () => {
+            console.log('ID: ',props.match.params.userId)
+            let _profileData = profileData;
+            _profileData.userData.username = props.match.params.userId
+            _profileData.userData.tagLine = '#'+props.match.params.tagLine
+            dispatch(setProfileData(_profileData))
+            setLoading(false)
+        }
+        setData()
     },[])
 
-/*     useEffect(()=>{
-        dispatch(setProfileData({}))
-    },[]) */
-    
-    return(
-            <Row gutter={[10,10]}>
-                <Col md={10} xs={24} lg={8} xl={6}>
-                        <Row>
-                            <UserBox userData={profileData.userData}/>
-                        </Row>
-                      {/*   <Row style={{paddingTop:10}}>
-                            <UserBox userData={profileData.userData}/>
-                        </Row> */}
-                </Col>
-                <Col md={14} xs={24} lg={16} xl={18}>
-                        {matchHistoryTop()}
-                        <MatchHistoryBottom matchHistory={profileData.matchHistory}/>
-                </Col>
-            </Row>
-    )
+    if(!loading)
+        return(
+                <Row gutter={[10,10]}>
+                    <Col md={10} xs={24} lg={8} xl={6}>
+                            <Row>
+                                <UserBox/>
+                            </Row>
+                    </Col>
+                    <Col md={14} xs={24} lg={16} xl={18}>
+                            {matchHistoryTop()}
+                            <MatchHistoryBottom/>
+                    </Col>
+                </Row>
+        )
+    else return null
 }
 
 

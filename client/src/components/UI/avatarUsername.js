@@ -5,12 +5,16 @@ import {
     Typography,
     Avatar
 } from 'antd';
-import {useSelector} from 'react-redux';
+import {useSelector,shallowEqual} from 'react-redux';
 
 const AvatarUsername = (props) => {
 
     const userData = useSelector(state => state.profileReducer.profileData.userData);
     
+    useEffect(()=> {
+        console.log('DATOS ACTUALIZAUS',userData)
+    },[userData])
+
     return (
         <Row gutter={10,10} justify={"start"}>
             <Col style={styles.avatarContainer}>

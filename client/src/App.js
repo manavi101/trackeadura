@@ -1,5 +1,10 @@
 import React,{useState,useEffect} from 'react';
-import {Layout,Image} from 'antd';
+import {
+  Layout,
+  Image,
+  Col,
+  Row
+} from 'antd';
 import 'antd/dist/antd.css';
 import Header from './components/Header';
 import Profile from './components/Profile';
@@ -7,7 +12,7 @@ import Home from './components/Home';
 import {useDispatch,useSelector} from 'react-redux';
 import {BrowserRouter,Route} from 'react-router-dom';
 
-const { Content } = Layout
+const { Content,Footer } = Layout
 
 const App = () => {
 
@@ -23,19 +28,15 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Layout className="site-layout-background"
-         style={{
-          margin: 0,
-          minHeight: 280,
-          //height:'100vh',
-          backgroundColor:'#111'
-        }}>
-          <Route path={'/'} component={Header}/>
-          <Content style={{padding: 24,backgroundColor:'#111'}}>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/:userId/:tagLine' component={Profile}/>
-          </Content>
-      </Layout>
+      <Row align="middle" justify="center">
+        <Col span={24} style={{backgroundColor:'#111'}}>
+            <Route path={'/'} component={Header}/>
+            <Content style={{padding: 24,backgroundColor:'#111'}}>
+              <Route exact path='/' component={Home}/>
+              <Route exact path='/:userId/:tagLine' component={Profile}/>
+            </Content>
+        </Col>
+      </Row>
     </BrowserRouter>
   );
 }
