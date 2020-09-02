@@ -10,6 +10,7 @@ import {
 import { SearchOutlined } from '@ant-design/icons';
 import styles from './indexHome.module.css';
 import {useHistory} from 'react-router-dom';
+import StyledRow from '../UI/themed-components/row';
 
 const Home = (props) => {
 
@@ -46,11 +47,11 @@ const Home = (props) => {
 
 
     return (
-        <Row align="middle" justify="middle" className={styles.background}>
+        <StyledRow align="middle" justify="middle" className={styles.background}>
             <Col span={24}>
-                <Row align="middle" justify="center">
-                    <h1 className={styles.title}>Trackeadura</h1>
-                </Row>
+                <StyledRow align="middle" justify="center" className={styles.title}>
+                    Trackeadura
+                </StyledRow>
                 <Row align="middle" justify="center" > 
                     <Col xs={22} s={18} md={12} className={styles.searchBar}>
                         <Row>
@@ -107,7 +108,7 @@ const Home = (props) => {
                     </Col>
                 </Row>
             </Col>
-        </Row>
+        </StyledRow>
         
     )
 }

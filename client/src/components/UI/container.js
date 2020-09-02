@@ -1,16 +1,14 @@
 import React, {useEffect,useState} from 'react';
-import {
-    Row,
-    Col
-} from 'antd';
+import StyledRow from './themed-components/row';
+import StyledCol from './themed-components/col';
 
 const Container = (props) => {
     return (
-        <Row style={styles.outerContainer}>
-            <Col span={24} style={styles.innerContainer}>
+        <StyledRow style={styles.outerContainer}>
+            <StyledCol span={props.span} style={styles.innerContainer}>
                 {props.children}
-            </Col>
-        </Row>
+            </StyledCol>
+        </StyledRow>
     )
 }
 
@@ -18,7 +16,6 @@ export default Container;
 
 const styles = {
     innerContainer: {
-        backgroundColor:'#282a4a',
         borderRadius:15,
         padding:15
     },

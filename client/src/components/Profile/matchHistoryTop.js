@@ -5,10 +5,12 @@ import {
     Col,
 } from 'antd';
 import styles from './styles';
+import StyledRow from '../UI/themed-components/row';
+import StyledCol from '../UI/themed-components/col';
 
 const matchHistoryTop = () => {
     return (
-            <Row style={styles.matchHistoryContainer}>
+            <StyledRow>
                 <Col span={18} >
                     <Row>
                         <Col span={6}>
@@ -57,7 +59,7 @@ const matchHistoryTop = () => {
                         </Col>
                     </Row>
                 </Col>
-            </Row>
+            </StyledRow>
     )
 }
 

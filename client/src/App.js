@@ -5,29 +5,35 @@ import Profile from './components/Profile';
 import Home from './components/Home';
 import {useDispatch,useSelector} from 'react-redux';
 import {BrowserRouter,Route} from 'react-router-dom';
+import { ThemeProvider ,createGlobalStyle} from 'styled-components';
+import THEMES from './constants/themes';
+import { getTheme } from './utils/getTheme';
+import Background from './components/UI/themed-components/background';
 
 const { Content,Footer } = Layout
 
 const App = () => {
 
   const dispatch = useDispatch()
-  const value = useSelector(state => state.profileReducer.profileData)
-  const [valor, setValor] = useState(null)
-
-  useEffect(()=>{
-    //console.log('value',value)
-  },[])
-
-
+  const [themeName, setThemeName] = useState(THEMES.dark)
+  const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${props => props.theme.background}
+    color: ${props => props.theme.color}
+  }
+  `;
 
   return (
     <BrowserRouter>
-      <Layout style={{height:'100%',backgroundColor:'#111'}}>
-          <Content style={{backgroundColor:'#111'}}>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/:userId/:tagLine' component={Profile}/>
-          </Content>
-      </Layout>
+      <ThemeProvider theme={getTheme(themeName)}>
+        <Background>
+            <>
+              <GlobalStyle/>
+              <Route exact path='/' component={Home}/>
+              <Route exact path='/:userId/:tagLine' component={Profile}/>
+           </>
+        </Background>
+      </ThemeProvider> 
     </BrowserRouter>
   );
 }

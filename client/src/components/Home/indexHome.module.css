@@ -1,6 +1,6 @@
 .background {
-    background-color: #111;
     height: 100%;
+    border-radius:0px;
 }
 .searchBar{
     height: 38px;
@@ -11,13 +11,11 @@
     padding: 4px;
 }
 .searchBarInput{
-    color: #111;
 }
 .searchBarColButton{
     padding: 3px;
 }
 .searchBarButton{
-    color: #111;
 }
 .searchBarDivider{
     height: 100%;
@@ -31,8 +29,8 @@
 }
 .title{
     font-weight: bolder;
-    color: #eee;
     font-size: 102px;
+    border-radius:0px;
 }
 @media only screen and (max-width: 768px) {
     .title{

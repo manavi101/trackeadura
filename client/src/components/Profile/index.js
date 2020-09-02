@@ -30,7 +30,7 @@ const Profile = (props) => {
 
     if(!loading)
         return(
-            <div style={{backgroundColor:'#111'}}>
+            <div>
                 <Header/>
                 <div style={{paddingTop: 24,paddingLeft:5,paddingRight:5,paddingBottom:24}}>
                 <Row gutter={[10,10]}>

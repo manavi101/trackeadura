@@ -11,6 +11,7 @@ import AvatarUsername from '../UI/avatarUsername';
 import styles from './styles';
 import RankDisplay from '../UI/rankDisplay';
 import UserStats from './userStats';
+import StyledCol from '../UI/themed-components/col';
 
 const UserBox = (props) => {
 
@@ -19,13 +20,13 @@ const UserBox = (props) => {
     
     let userBox;
     userData ? userBox = (
-        <Col span={24} style={styles.userBoxContainer}>
+        <StyledCol span={24}>
             <AvatarUsername/>
             <Divider/>
             <RankDisplay rankUri={userData.rankUri} rankName={userData.rankName}/>
             <Divider/>
             <UserStats userStats={userData.userStats}/>
-        </Col>
+        </StyledCol>
     ) 
     : userBox = (
         <Col span={24} style={styles.userBoxContainer}>

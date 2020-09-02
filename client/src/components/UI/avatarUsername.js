@@ -1,10 +1,10 @@
 import React, {useEffect,useState} from 'react';
 import {
-    Row,
-    Col,
     Typography,
     Avatar
 } from 'antd';
+import StyledRow from './themed-components/row';
+import StyledCol from './themed-components/col';
 import {useSelector,shallowEqual} from 'react-redux';
 
 const AvatarUsername = (props) => {
@@ -16,15 +16,15 @@ const AvatarUsername = (props) => {
     },[userData])
 
     return (
-        <Row gutter={10,10} justify={"start"}>
-            <Col style={styles.avatarContainer}>
+        <StyledRow gutter={10,10} justify={"start"}>
+            <StyledCol style={styles.avatarContainer}>
                 <Avatar size={75} gap={5} src={userData.avatarUri}/>  
-            </Col>
-            <Col style={styles.nameContainer}>
+            </StyledCol>
+            <StyledCol style={styles.nameContainer}>
                 <Typography style={styles.username}>{userData.username}{userData.tagLine}</Typography>
                 <Typography style={styles.lowerText}>{userData.lastPlayed}</Typography>
-            </Col>
-        </Row>
+            </StyledCol>
+        </StyledRow>
     )
 }
 

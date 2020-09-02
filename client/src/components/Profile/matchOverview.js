@@ -8,6 +8,7 @@ import {
 } from 'antd';
 import styles from './matchOverview.module.css';
 import { WindowSize } from '../../utils/actions';
+import StyledRow2 from '../UI/themed-components/row2';
 
 const MatchOverview = (props) => {
 
@@ -21,7 +22,7 @@ const MatchOverview = (props) => {
 
     let matchOverview;
     matchData ? matchOverview = (
-        <Row align="middle" style={styles2.container}>
+        <StyledRow2 align="middle" style={styles2.container}>
             <Col span={3} style={styles2.agentImageContainer}>
                 <div style={{borderRadius:15}}>
                     <Avatar src={matchData.agentUri} className={styles.agentImage} size={size.width / 15} shape="square"/>
@@ -47,7 +48,7 @@ const MatchOverview = (props) => {
                 <Row style={styles2.defaultText}><p>{matchData.matchDuration}</p></Row>
                 <Row style={styles2.defaultText}><p>{matchData.matchModeMap}</p></Row>
             </Col>
-        </Row>
+        </StyledRow2>
     ) : matchOverview = <Spin/>
 
     return matchOverview;
@@ -57,8 +58,8 @@ export default MatchOverview;
 
 const styles2 = {
     container:{
-        backgroundColor:"#141221",
         borderRadius:15,
+        padding:0
     },
     agentImageContainer: {
         borderRadius:15

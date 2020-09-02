@@ -1,6 +1,5 @@
 const styles = {
     userBoxContainer:{
-        backgroundColor:'#282a4a',
         borderRadius:15,
         padding:15
     },
@@ -10,7 +9,6 @@ const styles = {
         padding:15
     },
     matchHistoryTopText1: {
-        color:'#fff',
         fontSize:18,
         fontWeight:'bold'
     },

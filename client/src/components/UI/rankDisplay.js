@@ -1,24 +1,24 @@
 import React, {useEffect,useState} from 'react';
 import {
-    Row,
-    Col,
     Image
 } from 'antd';
 import {useSelector} from 'react-redux';
+import StyledCol from './themed-components/col';
+import StyledRow from './themed-components/row';
 
 const RankDisplay = (props) => {
 
     const userData = useSelector(state => state.profileReducer.profileData.userData);
 
     return (
-        <Row style={styles.rankContainer} justify={"center"} align={"middle"}>
-            <Col span={12} style={styles.rankImageContainer}>
+        <StyledRow style={styles.rankContainer} justify={"center"} align={"middle"}>
+            <StyledCol span={12} style={styles.rankImageContainer}>
                 <Image src={userData.rankUri} preview={false}/>
-            </Col>
-            <Col span={12} style={styles.rankName}>
+            </StyledCol>
+            <StyledCol span={12} style={styles.rankName}>
                 {userData.rankName}
-            </Col>
-        </Row>
+            </StyledCol>
+        </StyledRow>
     )
 }
 
