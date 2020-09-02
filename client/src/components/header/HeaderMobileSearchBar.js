@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {Row,Col,Button,Input,Divider} from 'antd';
+import {Row,Col,Button,Input} from 'antd';
 import { SearchOutlined,ArrowLeftOutlined } from '@ant-design/icons';
 import styles from './HeaderMobileSearchBar.module.css';
 

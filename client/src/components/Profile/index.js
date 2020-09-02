@@ -3,6 +3,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import {
     Row,
     Col,
+    Layout
 } from 'antd';
 import Header from '../Header';
 import MatchHistoryBottom from './matchHistoryBottom';
@@ -10,6 +11,7 @@ import matchHistoryTop from './matchHistoryTop';
 import UserBox from './userBox';
 import {setProfileData} from '../../actions/index';
 import profileData from './data';
+
 
 const Profile = (props) => {
 
@@ -33,17 +35,17 @@ const Profile = (props) => {
             <div>
                 <Header/>
                 <div style={{paddingTop: 24,paddingLeft:5,paddingRight:5,paddingBottom:24}}>
-                <Row gutter={[10,10]}>
-                    <Col md={10} xs={24} lg={8} xl={6}>
-                            <Row>
-                                <UserBox/>
-                            </Row>
-                    </Col>
-                    <Col md={14} xs={24} lg={16} xl={18}>
-                            {matchHistoryTop()}
-                            <MatchHistoryBottom/>
-                    </Col>
-                </Row>
+                    <Row gutter={[10,10]}>
+                        <Col md={10} xs={24} lg={8} xl={6}>
+                                <Row>
+                                    <UserBox/>
+                                </Row>
+                        </Col>
+                        <Col md={14} xs={24} lg={16} xl={18}>
+                                {matchHistoryTop()}
+                                <MatchHistoryBottom/>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         )

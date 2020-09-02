@@ -35,7 +35,7 @@ const matchHistoryTop = () => {
                     <Row>
                         <Col span={8}>
                             <Row justify="center">
-                                <Avatar src={'../'+process.env.PUBLIC_URL + 'images/agents/jett-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar}/>
+                                <Avatar src={process.env.PUBLIC_URL + '/images/agents/jett-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar}/>
                             </Row>
                             <Row justify="center" style={styles.matchHistoryAvatarText}>
                                 100%
@@ -43,7 +43,7 @@ const matchHistoryTop = () => {
                         </Col>
                         <Col span={8}>
                             <Row justify="center">
-                                <Avatar src={'../'+process.env.PUBLIC_URL + 'images/agents/omen-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar}/>
+                                <Avatar src={process.env.PUBLIC_URL+'/images/agents/omen-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar}/>
                             </Row>
                             <Row justify="center" style={styles.matchHistoryAvatarText}>
                                 90%
@@ -51,7 +51,7 @@ const matchHistoryTop = () => {
                         </Col>
                         <Col span={8}>
                             <Row justify="center">
-                                <Avatar src={'../'+process.env.PUBLIC_URL + 'images/agents/sova-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar} gap={3}/>
+                                <Avatar src={process.env.PUBLIC_URL + '/images/agents/sova-concept-headshot.png'} size="large" style={styles.matchHistoryTopAvatar} gap={3}/>
                             </Row>
                             <Row justify="center" style={styles.matchHistoryAvatarText}>
                                 75%

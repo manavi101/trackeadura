@@ -1,13 +1,14 @@
-import React, {useEffect,useState} from 'react';
-import {Row,Col,Button,Input,Divider} from 'antd';
-import { SearchOutlined,ArrowLeftOutlined } from '@ant-design/icons';
+import React from 'react';
+import {Link} from 'react-router-dom'
+import {Row,Col,Button} from 'antd';
+import { SearchOutlined} from '@ant-design/icons';
 import styles from './HeaderMobileBody.module.css';
 
 const HeaderMobileBody = (setShowSearch) => {
     return(
         <Row className={styles.headerRow}>
             <Col span={12} className={styles.headerColLogo}>
-                <h2 className={styles.headerLogo}>Trackeadura</h2>
+                <Link to="/"><h2 className={styles.headerLogo}>Trackeadura</h2></Link> 
             </Col>
                 <Col span={8} className={styles.headerSearchBarColAppearButton}>
                     <Button ghost type="text" icon={<SearchOutlined />} className={styles.headerSearchBarAppearButton} onClick={()=>setShowSearch.setShowSearch(true)}/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {Row,Col,Button,Input,Divider} from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import styles from './HeaderDesktop.module.css';
@@ -9,7 +10,7 @@ const HeaderDesktop = () => {
     return(
         <Row className={styles.headerRow}>
             <Col span={6} className={styles.headerColLogo}>
-                <h2 className={styles.headerLogo}>Trackeadura</h2>
+                <Link to="/"><h2 className={styles.headerLogo}>Trackeadura</h2></Link>
             </Col>
             <Col span={12} className={styles.headerColSearchBar}>
                 <Col className={styles.headerSearchBar}>

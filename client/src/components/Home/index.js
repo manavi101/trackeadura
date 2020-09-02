@@ -1,11 +1,12 @@
-import React, {useEffect,useState,useRef} from 'react';
+import React, {useState,useRef} from 'react';
 import {
     Row,
     Col,
     Input,
     Divider,
     Button,
-    Form
+    Form,
+    Layout
 } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import styles from './indexHome.module.css';
@@ -32,7 +33,7 @@ const Home = (props) => {
         } else if (!state.username && state.tagLine) {
             alert("NO HA INGRESADO USUARIO")
         } else {
-            history.push(state.username+'/'+state.tagLine)
+            history.push('profile/'+state.username+'/'+state.tagLine)
         } 
     }
     
@@ -69,7 +70,7 @@ const Home = (props) => {
                                                             <Input
                                                                 name="username"
                                                                 placeholder="Username"
-                                                                className={styles.searchBarInput}
+                                                                className={styles.searchBarInputUsername}
                                                                 bordered={false}
                                                                 value={state.username}
                                                                 onChange={handleInputChange}
@@ -87,7 +88,7 @@ const Home = (props) => {
                                                                 placeholder="#TAG"
                                                                 value={state.tagLine}
                                                                 onChange={handleInputChange}
-                                                                className={styles.searchBarInput}
+                                                                className={styles.searchBarInputTag}
                                                                 bordered={false}
                                                                 onPressEnter={handleSubmit}
                                                             />
