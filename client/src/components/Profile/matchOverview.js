@@ -29,24 +29,24 @@ const MatchOverview = (props) => {
                 </div>
             </Col>
             <Col span={4}>
-                <Row style={styles2.boldText}><p>{matchData.matchResult}</p></Row>
-                <Row style={styles2.position}><p>{matchData.userPosition}</p></Row>
+                <Row style={styles2.boldText}>{matchData.matchResult}</Row>
+                <Row style={styles2.position}>{matchData.userPosition}</Row>
             </Col>
             <Col span={4}>
-                <Row style={styles2.boldText}><p>{matchData.userKDA} KD</p></Row>
-                <Row style={styles2.defaultText}><p>{matchData.userKDA2}</p></Row>
+                <Row style={styles2.boldText}>{matchData.userKDA} KD</Row>
+                <Row style={styles2.defaultText}>{matchData.userKDA2}</Row>
             </Col>
             <Col span={3}>
-                <Row style={styles2.boldText}><p>{matchData.userKPR} KPR</p></Row>
-                <Row style={styles2.defaultText}><p>{matchData.userADR} ADR</p></Row>
+                <Row style={styles2.boldText}>{matchData.userKPR} KPR</Row>
+                <Row style={styles2.defaultText}>{matchData.userADR} ADR</Row>
             </Col>
             <Col span={5}>
-                <Row style={styles2.boldText}><p>{matchData.userCombatScore} Combat Score</p></Row>
-                <Row style={styles2.defaultText}><p>{"-"}</p></Row>
+                <Row style={styles2.boldText}>{matchData.userCombatScore} Combat Score</Row>
+                <Row style={styles2.defaultText}>{"-"}</Row>
             </Col>
             <Col span={5}>
-                <Row style={styles2.defaultText}><p>{matchData.matchDuration}</p></Row>
-                <Row style={styles2.defaultText}><p>{matchData.matchModeMap}</p></Row>
+                <Row style={styles2.defaultText}>{matchData.matchDuration}</Row>
+                <Row style={styles2.defaultText}>{matchData.matchModeMap}</Row>
             </Col>
         </StyledRow2>
     ) : matchOverview = <Spin/>
@@ -69,9 +69,9 @@ const styles2 = {
         fontSize:"1vw"
     },
     boldText:{
-        color:"#fff",
+        color:"#eee",
         fontWeight:"bold",
-        fontSize:"1.3vw"
+        fontSize:"1.2vw"
     },
     position: {
         color:"#ab9924",

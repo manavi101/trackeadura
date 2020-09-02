@@ -49,6 +49,7 @@
 .searchBarInputTag:focus-within{
     color:#eee
 }
+
 @media only screen and (max-width: 768px) {
     .title{
         font-size: 50px

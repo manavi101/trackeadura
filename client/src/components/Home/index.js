@@ -79,13 +79,13 @@ const Home = (props) => {
                                                             />
                                                         </Form.Item>
                                                     </Col>
-                                                    <Col span={8}>
+                                                    <Col span={8} className={styles.tagCol}>
                                                         <Form.Item>
                                                             <Input
                                                                 name="tagLine"
-                                                                //prefix={"#"}
+                                                                prefix={"#"}
                                                                 ref={tagInputRef}
-                                                                placeholder="#TAG"
+                                                                placeholder="TAG"
                                                                 value={state.tagLine}
                                                                 onChange={handleInputChange}
                                                                 className={styles.searchBarInputTag}
