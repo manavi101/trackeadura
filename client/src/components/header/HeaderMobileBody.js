@@ -1,6 +1,6 @@
-import React, {useEffect,useState} from 'react';
-import {Row,Col,Button,Input,Divider} from 'antd';
-import { SearchOutlined,ArrowLeftOutlined } from '@ant-design/icons';
+import React from 'react';
+import {Row,Col,Button} from 'antd';
+import { SearchOutlined} from '@ant-design/icons';
 import styles from './HeaderMobileBody.module.css';
 
 const HeaderMobileBody = (setShowSearch) => {

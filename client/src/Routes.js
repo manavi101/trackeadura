@@ -20,7 +20,7 @@ const App = () => {
   return (
     <BrowserRouter>
             <Route exact path='/' component={Home}/>
-            <Route exact path='/:userId/:tagLine' component={Profile}/>
+            <Route exact path='/profile/:userId/:tagLine' component={Profile}/>
     </BrowserRouter>
   );
 }

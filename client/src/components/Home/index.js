@@ -1,4 +1,4 @@
-import React, {useEffect,useState,useRef} from 'react';
+import React, {useState,useRef} from 'react';
 import {
     Row,
     Col,
@@ -32,7 +32,7 @@ const Home = (props) => {
         } else if (!state.username && state.tagLine) {
             alert("NO HA INGRESADO USUARIO")
         } else {
-            history.push(state.username+'/'+state.tagLine)
+            history.push('profile/'+state.username+'/'+state.tagLine)
         } 
     }
     
