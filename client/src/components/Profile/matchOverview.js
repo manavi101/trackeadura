@@ -65,11 +65,10 @@ const styles2 = {
         borderRadius:15
     },
     defaultText:{
-        color:"#bbb",
         fontSize:"1vw"
     },
     boldText:{
-        color:"#eee",
+        //color:"#eee",
         fontWeight:"bold",
         fontSize:"1.2vw"
     },

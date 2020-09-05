@@ -12,10 +12,12 @@ const RankDisplay = (props) => {
 
     return (
         <StyledRow style={styles.rankContainer} justify={"center"} align={"middle"}>
-            <StyledCol span={12} style={styles.rankImageContainer}>
-                <Image src={userData.rankUri} preview={false}/>
+            <StyledCol span={9} style={styles.rankImageContainer}>
+                <div style={{backgroundColor:'#ccc',borderRadius:90,padding:0}}>
+                    <Image src={userData.rankUri} preview={false}/>
+                </div>
             </StyledCol>
-            <StyledCol span={12} style={styles.rankName}>
+            <StyledCol span={15} style={styles.rankName}>
                 {userData.rankName}
             </StyledCol>
         </StyledRow>

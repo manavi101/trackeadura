@@ -21,7 +21,7 @@ const MatchOverviewMobile = (props) => {
 
     let matchOverview;
     matchData ? matchOverview = (
-        <Row align="middle" style={styles.container}>
+        <StyledRow2 align="middle" style={styles.container}>
             <Col span={6} style={styles.agentImageContainer}>
                 <div>
                     <Avatar src={matchData.agentUri} className={styles.agentImage} size={size.width / 10} shape="square"/>
@@ -39,7 +39,7 @@ const MatchOverviewMobile = (props) => {
                 <Row style={styles.defaultText}>{matchData.matchDuration}</Row>
                 <Row style={styles.defaultText}>{matchData.matchModeMap}</Row>
             </Col>
-        </Row>
+        </StyledRow2>
     ) : matchOverview = <Spin/>
 
     return matchOverview;

@@ -1,0 +1,12 @@
+.username{
+    font-size:20px;
+    font-weight:bold;
+}
+.lowerText{
+    color:#999;
+    font-size:16px;
+}
+.nameContainer{
+justify-items: space-around;
+text-justify: space-around;
+}

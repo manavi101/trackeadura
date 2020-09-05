@@ -47,10 +47,8 @@ export default UserStats;
 
 const styles = {
     userStats1:{
-        color:'#ccc'
     },
     userStats2:{
-        color:'#fff',
         fontSize:16,
         fontWeight:'bold'
     },

@@ -34,16 +34,16 @@ const Profile = (props) => {
         return(
             <div>
                 <Header/>
-                <div style={{paddingTop: 24,paddingLeft:5,paddingRight:5,paddingBottom:24}}>
+                <div style={{paddingTop: 24,paddingLeft:15,paddingRight:15,paddingBottom:24}}>
                     <Row gutter={[10,10]}>
                         <Col md={10} xs={24} lg={8} xl={6}>
                                 <Row>
                                     <UserBox/>
                                 </Row>
                         </Col>
-                        <Col md={14} xs={24} lg={16} xl={18}>
+                        <Col md={14} xs={24} lg={16} xl={18} >
                                 {matchHistoryTop()}
-                                <MatchHistoryBottom/>
+                                <MatchHistoryBottom />
                         </Col>
                     </Row>
                 </div>

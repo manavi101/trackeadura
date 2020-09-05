@@ -20,7 +20,7 @@ const UserBox = (props) => {
     
     let userBox;
     userData ? userBox = (
-        <StyledCol span={24}>
+        <StyledCol span={24} style={{borderRadius:15}}>
             <AvatarUsername/>
             <Divider/>
             <RankDisplay rankUri={userData.rankUri} rankName={userData.rankName}/>

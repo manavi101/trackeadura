@@ -3,6 +3,7 @@ import {
     Typography,
     Avatar
 } from 'antd';
+import styles from './avatarUsername.module.css';  
 import StyledRow from './themed-components/row';
 import StyledCol from './themed-components/col';
 import {useSelector,shallowEqual} from 'react-redux';
@@ -17,12 +18,12 @@ const AvatarUsername = (props) => {
 
     return (
         <StyledRow gutter={10,10} justify={"start"}>
-            <StyledCol style={styles.avatarContainer}>
+            <StyledCol className={styles.avatarContainer}>
                 <Avatar size={75} gap={5} src={userData.avatarUri}/>  
             </StyledCol>
-            <StyledCol style={styles.nameContainer}>
-                <Typography style={styles.username}>{userData.username}{userData.tagLine}</Typography>
-                <Typography style={styles.lowerText}>{userData.lastPlayed}</Typography>
+            <StyledCol className={styles.nameContainer}>
+                <p className={styles.username}>{userData.username}{userData.tagLine}</p>
+                <p className={styles.lowerText}>{userData.lastPlayed}</p>
             </StyledCol>
         </StyledRow>
     )
@@ -30,17 +31,3 @@ const AvatarUsername = (props) => {
 
 export default AvatarUsername;
 
-const styles = {
-    username:{
-        color:'#fff',
-        fontSize:20,
-        fontWeight:'bold'
-    },
-    lowerText:{
-        color:'#ccc',
-        fontSize:16
-    },
-    avatarContainer:{
-
-    }
-}

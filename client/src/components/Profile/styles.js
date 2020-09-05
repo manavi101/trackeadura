@@ -31,7 +31,6 @@ const styles = {
         backgroundColor:'#282a4a',
         borderRadius:15,
         padding:15,
-
     }
 }
 

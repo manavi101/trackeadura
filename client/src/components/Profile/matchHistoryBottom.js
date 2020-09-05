@@ -34,7 +34,7 @@ const MatchHistoryBottom = (props) => {
     
     return (
             <Row style={{paddingTop:10}} >
-                <StyledCol span={24} /* style={styles.matchHistoryContainer2} */>
+                <StyledCol span={24} style={{borderRadius:15}}>
                     {matchItem()}
                 </StyledCol>
             </Row>

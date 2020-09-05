@@ -1,7 +1,8 @@
 export default {
-    background:'#eee',
-    color:'#111',
-    color:'#ccc',
-    backgroundColor:'#888',
-    secondaryBackground:'#555',
+    background:'#fcfcfc',
+    color:'#333',
+    color2:'#ccc',
+    backgroundColor:'#e7e7e7',
+    secondaryBackground:'#e7e7e7',
+    borderRadius:15,
 }

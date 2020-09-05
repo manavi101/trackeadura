@@ -10,7 +10,7 @@ import StyledCol from '../UI/themed-components/col';
 
 const matchHistoryTop = () => {
     return (
-            <StyledRow>
+            <StyledRow style={{borderRadius:15}}>
                 <Col span={18} >
                     <Row>
                         <Col span={6}>
