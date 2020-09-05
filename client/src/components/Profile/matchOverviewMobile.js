@@ -8,6 +8,7 @@ import {
 } from 'antd';
 import { useSelector } from 'react-redux';
 import { WindowSize } from '../../utils/actions';
+import {StyledRow2} from '../UI/themed-components';
 
 const MatchOverviewMobile = (props) => {
 
