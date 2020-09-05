@@ -1,16 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import {Row,Col,Button,Input,Divider} from 'antd';
+import {Row,Col,Button,Input,Divider,Switch} from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import styles from './HeaderDesktop.module.css';
 
-const HeaderDesktop = () => {
-
-
+const HeaderDesktop = (props) => {
     return(
         <Row className={styles.headerRow}>
             <Col span={6} className={styles.headerColLogo}>
                 <Link to="/"><h2 className={styles.headerLogo}>Trackeadura</h2></Link>
+            <Switch checkedChildren="Light" unCheckedChildren="Dark" onChange={props.changeTheme} />
             </Col>
             <Col span={12} className={styles.headerColSearchBar}>
                 <Col className={styles.headerSearchBar}>

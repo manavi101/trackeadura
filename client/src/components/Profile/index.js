@@ -31,9 +31,7 @@ const Profile = (props) => {
     },[])
 
     if(!loading)
-        return(
-            <div>
-                <Header/>
+        return(  
                 <div style={{paddingTop: 24,paddingLeft:15,paddingRight:15,paddingBottom:24}}>
                     <Row gutter={[10,10]}>
                         <Col md={10} xs={24} lg={8} xl={6}>
@@ -47,7 +45,6 @@ const Profile = (props) => {
                         </Col>
                     </Row>
                 </div>
-            </div>
         )
     else return null
 }

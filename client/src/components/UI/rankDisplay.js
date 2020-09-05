@@ -13,7 +13,7 @@ const RankDisplay = (props) => {
     return (
         <StyledRow style={styles.rankContainer} justify={"center"} align={"middle"}>
             <StyledCol span={9} style={styles.rankImageContainer}>
-                <div style={{backgroundColor:'#ccc',borderRadius:90,padding:0}}>
+                <div style={{backgroundColor:'#c2171733',borderRadius:90,padding:0}}>
                     <Image src={userData.rankUri} preview={false}/>
                 </div>
             </StyledCol>
