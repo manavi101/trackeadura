@@ -15,30 +15,28 @@ const MatchHistoryBottom = (props) => {
 
     const matchHistory = useSelector(state => state.profileReducer.profileData.matchHistory) || [];
     const size = WindowSize()
-
+    const [loading,setLoading] = useState(true)
     console.log('PROPS STYLED',props)
 
-    const matchItem = () => {
-        let arr = []
-        {matchHistory.map((item,index)=>{
-            arr.push (
+    const matchItem = matchHistory.map((item,index)=>{
+            return (
                 <Row style={{paddingTop:15}} key={index}>
                     <Col span={24}>
                         {size.width > 991 ? <MatchOverview matchData={item}/> : <MatchOverviewMobile matchData={item}/> }
                     </Col>
                 </Row>
             )
-        })}
-        return arr;
-    }
+        })
     
-    return (
-            <Row style={{paddingTop:10}} >
-                <StyledCol span={24} style={{borderRadius:15}}>
-                    {matchItem()}
-                </StyledCol>
-            </Row>
-    )
+    if(loading)
+        return (
+                <Row style={{paddingTop:10}} >
+                    <StyledCol span={24} style={{borderRadius:15}}>
+                        {matchItem}
+                    </StyledCol>
+                </Row>
+        )
+    else return 'ola'
 }
 
 export default MatchHistoryBottom;
