@@ -2,7 +2,7 @@
     {
         "id":1,
         "name":"Classic",
-        "categorie":"Sidearms",
+        "category":"Sidearms",
         "firemode":"Semi-Automatic",
         "firerate":"6.75 rounds/sec",
         "altfire":true,
@@ -15,7 +15,7 @@
     {
         "id":2,
         "name":"Shorty",
-        "categorie":"Sidearms",
+        "category":"Sidearms",
         "firemode":"Semi-Automatic",
         "firerate":"3.33 rounds/sec",
         "altfire":false,
@@ -28,7 +28,7 @@
     {
         "id":3,
         "name":"Frenzy",
-        "categorie":"Sidearms",
+        "category":"Sidearms",
         "firemode":"Full-Automatic",
         "firerate":"10 rounds/sec",
         "altfire":false,
@@ -41,7 +41,7 @@
     {
         "id":4,
         "name":"Ghost",
-        "categorie":"Sidearms",
+        "category":"Sidearms",
         "firemode":"Semi-Automatic",
         "firerate":"6.75 rounds/sec",
         "altfire":false,
@@ -54,7 +54,7 @@
     {
         "id":5,
         "name":"Sheriff",
-        "categorie":"Sidearms",
+        "category":"Sidearms",
         "firemode":"Semi-Automatic",
         "firerate":"4 rounds/sec",
         "altfire":false,
@@ -67,7 +67,7 @@
     {
         "id":6,
         "name":"Stinger",
-        "categorie":"SMGs",
+        "category":"SMGs",
         "firemode":"Full-Automatic",
         "firerate":"18 rounds/sec",
         "altfire":true,
@@ -80,7 +80,7 @@
     {
         "id":7,
         "name":"Spectre",
-        "categorie":"SMGs",
+        "category":"SMGs",
         "firemode":"Full-Automatic",
         "firerate":"13.33 rounds/sec",
         "altfire":true,
@@ -93,7 +93,7 @@
     {
         "id":8,
         "name":"Bucky",
-        "categorie":"Shotguns",
+        "category":"Shotguns",
         "firemode":"Semi-Automatic",
         "firerate":"1.1 rounds/sec",
         "altfire":true,
@@ -106,7 +106,7 @@
     {
         "id":9,
         "name":"Judge",
-        "categorie":"Shotguns",
+        "category":"Shotguns",
         "firemode":"Full-Automatic",
         "firerate":"3.5 rounds/sec",
         "altfire":false,
@@ -119,7 +119,7 @@
     {
         "id":10,
         "name":"Bulldog",
-        "categorie":"Rifles",
+        "category":"Rifles",
         "firemode":"Full-Automatic",
         "firerate":"9.14 rounds/sec",
         "altfire":true,
@@ -132,7 +132,7 @@
     {
         "id":11,
         "name":"Guardian",
-        "categorie":"Rifles",
+        "category":"Rifles",
         "firemode":"Semi-Automatic",
         "firerate":"4.75 rounds/sec",
         "altfire":true,
@@ -145,7 +145,7 @@
     {
         "id":12,
         "name":"Phantom",
-        "categorie":"Rifles",
+        "category":"Rifles",
         "firemode":"Full-Automatic",
         "firerate":"11 rounds/sec",
         "altfire":true,
@@ -158,7 +158,7 @@
     {
         "id":13,
         "name":"Vandal",
-        "categorie":"Rifles",
+        "category":"Rifles",
         "firemode":"Full-Automatic",
         "firerate":"9.75 rounds/sec",
         "altfire":true,
@@ -171,7 +171,7 @@
     {
         "id":14,
         "name":"Marshal",
-        "categorie":"Snipers",
+        "category":"Snipers",
         "firemode":"Semi-Automatic",
         "firerate":"1.5 rounds/sec",
         "altfire":true,
@@ -184,7 +184,7 @@
     {
         "id":15,
         "name":"Operator",
-        "categorie":"Snipers",
+        "category":"Snipers",
         "firemode":"Semi-Automatic",
         "firerate":"0.75 rounds/sec",
         "altfire":true,
@@ -197,7 +197,7 @@
     {
         "id":16,
         "name":"Ares",
-        "categorie":"Heavy",
+        "category":"Heavy",
         "firemode":"Full-Automatic",
         "firerate":"10 -> 13 rounds/sec (increasing during fire)",
         "altfire":true,
@@ -210,7 +210,7 @@
     {
         "id":17,
         "name":"Odin",
-        "categorie":"Heavy",
+        "category":"Heavy",
         "firemode":"Full-Automatic",
         "firerate":"12 -> 15.6 rounds/sec (increasing during fire)",
         "altfire":true,
