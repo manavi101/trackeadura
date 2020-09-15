@@ -19,7 +19,29 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
 app.get(`/api/hello`, async (req, res) => {
-  res.send({ express: 'Hello From Express' });
+  res.send({express : "hello"});
+});
+//app.use(express.static(path.join(__dirname, 'Weapons.json')));
+app.get(`/api/Weapons`, async (req, res) => {
+  //res.sendFile(path.join(__dirname,'Weapons.json'));
+  try{
+    let fs = require('fs'); /* Put it where other modules included */
+    let Weapons = JSON.parse( await fs.readFileSync('Weapons.json', 'utf8'));
+    let WeaponsDamages = JSON.parse( await fs.readFileSync('WeaponsDamage.json', 'utf8'));
+    for(let i=0;Weapons.length>i; i++){
+      let aux=0;
+      Weapons[i].WeaponsDamage = [];
+      for(let j=0;WeaponsDamages.length>j; j++){
+          if(WeaponsDamages[j].weaponid===Weapons[i].id){
+              Weapons[i].WeaponsDamage[aux] = Object.assign(WeaponsDamages[j])
+              aux++;
+          }
+      }
+    }
+    res.send(Weapons);
+  } catch(err) {
+    res.status(500).send()
+  }
+  
 });

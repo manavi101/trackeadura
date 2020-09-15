@@ -2,7 +2,7 @@
   "name": "trackeadura-api",
   "version": "0.1.0",
   "description": "Trackeadura API backend",
-  "main": "server.js",
+  "main": "Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

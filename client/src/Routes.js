@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import 'antd/dist/antd.css';
 import {Switch} from 'antd';
 import {useDispatch,useSelector} from 'react-redux';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {Route,withRouter} from 'react-router-dom';
 import { ThemeProvider ,createGlobalStyle} from 'styled-components';
 import THEMES from './constants/themes';
 import { getTheme } from './utils/getTheme';
@@ -22,28 +22,28 @@ const GlobalStyle = createGlobalStyle`
   }
   `;
 
-const Routes = () => {
+const Routes = ({location}) => {
   const [themeName, setThemeName] = useState(THEMES.dark)
 
   const changeTheme = () => {
     setThemeName(themeName == THEMES.dark ? THEMES.light : THEMES.dark)
   }
 
+  const exludeHeaderPath = ['/']
+
   return (
-    <BrowserRouter>
      <ThemeProvider theme={getTheme(themeName)}>
         <Background>
-          <Header changeTheme={changeTheme}/>
-              <GlobalStyle/>
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/profile/:userId/:tagLine' component={Profile}/>
-              <Route exact path='/Weapons' component={Weapons}/>
-              <Route exact path='/canvas' component={Canvas}/>
+          {exludeHeaderPath.indexOf(location.pathname) < 0 && <Header changeTheme={changeTheme}/>}
+          <GlobalStyle/>
+          <Route exact path='/' component={Home}  />
+          <Route exact path='/profile/:userId/:tagLine' component={Profile} setShowHeader={true}/>
+          <Route exact path='/Weapons' component={Weapons} setShowHeader={true}/>
+          <Route exact path='/canvas' component={Canvas} setShowHeader={true}/>
         </Background>
-      </ThemeProvider> 
-    </BrowserRouter>
+      </ThemeProvider>   
   );
 }
 
-export default Routes;
+export default withRouter(Routes);
 
