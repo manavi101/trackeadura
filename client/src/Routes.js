@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
 import 'antd/dist/antd.css';
-import {Switch} from 'antd';
 import {useDispatch,useSelector} from 'react-redux';
 import {Route,withRouter} from 'react-router-dom';
 import { ThemeProvider ,createGlobalStyle} from 'styled-components';
@@ -15,6 +14,7 @@ import Header from './components/Header';
 import Weapons from './components/Weapons';
 import Canvas from './components/Canvas';
 
+
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme.background}
@@ -28,13 +28,13 @@ const Routes = ({location}) => {
   const changeTheme = () => {
     setThemeName(themeName == THEMES.dark ? THEMES.light : THEMES.dark)
   }
-
+  console.log(themeName)
   const exludeHeaderPath = ['/']
 
   return (
      <ThemeProvider theme={getTheme(themeName)}>
         <Background>
-          {exludeHeaderPath.indexOf(location.pathname) < 0 && <Header changeTheme={changeTheme}/>}
+          {exludeHeaderPath.indexOf(location.pathname) < 0 && <Header themes={themeName} changeTheme={changeTheme}/>}
           <GlobalStyle/>
           <Route exact path='/' component={Home}  />
           <Route exact path='/profile/:userId/:tagLine' component={Profile} setShowHeader={true}/>

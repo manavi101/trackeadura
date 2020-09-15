@@ -10,6 +10,7 @@ padding: 10px;
 color: ${props => props.theme.color};
 &:hover {
     color: ${props => props.theme.color2};
+    cursor:pointer;
 }
 &:focus {
     color: ${props => props.theme.color2};

@@ -27,11 +27,13 @@
     margin:auto;
     text-align: right;
 }
-.headerSearchBarAppearButton{
-    color: #fff;
-    height: 100%;
-}
 .headerRow{
     background-color:#211a4c;
     height:60px;
+}
+.headerIconButton{
+    height: 32px !important;
+    width: 32px !important;
+    color: #fff !important;
+    padding: 4px !important;
 }

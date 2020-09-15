@@ -12,7 +12,7 @@
 }
 .headerLogo{
     color:#fff;
-    font-size:20;
+    font-size:20px;
     font-Weight:bold;
     margin:auto;
     padding-left: 5px;
@@ -50,4 +50,19 @@
 .headerRow{
     background-color:#211a4c;
     height:60px;
+}
+.headerThemeButton{
+    height: 32px !important;
+    width: 32px !important;
+    color: #fff !important;
+    padding: 4px !important;
+}
+@media (max-width: 991px){
+    .headerLogo{
+        font-size: 18px;
+        padding-left: 4px;
+    }
+    .headerSignInButton{
+        font-size: 12px;
+    }
 }

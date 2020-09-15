@@ -8,7 +8,11 @@ const Header = (props) => {
 
         return(
             <div className="Header" style={{position:"sticky",top:0,zIndex:11}}>
-                {size.width > 768 ?<HeaderDesktop changeTheme={props.changeTheme}/>:<HeaderMobile changeTheme={props.changeTheme}/>}
+                {size.width > 768 ?
+                    <HeaderDesktop themes={props.themes} changeTheme={props.changeTheme}/>
+                :
+                    <HeaderMobile themes={props.themes} changeTheme={props.changeTheme}/>
+                }
             </div>
         );
 }
