@@ -43,8 +43,8 @@ import {setweaponsData} from '../../actions/index';
         .then(res => res.json())
         .then(
           (result) => {
-            setIsLoaded(true);
             dispatch(setweaponsData(result))
+            setIsLoaded(true);
           },
           (error) => {
             setIsLoaded(true);

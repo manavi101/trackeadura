@@ -14,7 +14,6 @@ const WeaponsCategories = () =>{
     const WeaponsData = useSelector(state => state.weaponsReducer.weaponsData);
 
     useEffect(()=>{
-        if(Array.isArray(WeaponsData)){
             /*console.log(WeaponsData)
         const groupByKey = (list, key) => list.reduce((hash, obj) => ({...hash, [obj[key]]:( hash[obj[key]] || [] ).concat(obj)}), {})
         categories = groupByKey(WeaponsData,"category");
@@ -29,7 +28,6 @@ const WeaponsCategories = () =>{
             
             setCategories(aux)
             setisLoaded(true)
-        } 
     },[WeaponsData])
 
     if(isLoaded){
