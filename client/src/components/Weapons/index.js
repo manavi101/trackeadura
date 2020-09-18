@@ -6,6 +6,7 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 import {ThemeContext} from 'styled-components';
 import StyledCol from '../UI/themed-components/col';
 import StyledButtonText from '../UI/themed-components/ButtonText';
+import WeaponsCategories from './categories.js';
 import styles from './Weapons.module.css';
 import {setweaponsData} from '../../actions/index';
 
@@ -55,35 +56,25 @@ import {setweaponsData} from '../../actions/index';
     
     if (error) {
     return <div>Error fatal</div>;
-    } else if (!isLoaded) {
-        return <div>Loading...</div>;
-    } else {
-        console.log(WeaponsData)
+    } else if (isLoaded) {
         return (
             <Layout style={{backgroundColor:themeContext.backgroundColor}}>
-            <Row style={{backgroundColor:themeContext.secondaryBackground,textAlign:"center",padding:"10px"}}>
-                <Col xs={24} className="">
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>SMGs</StyledButtonText>
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>Sidearms</StyledButtonText>
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>Shotguns</StyledButtonText>
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>Rifles</StyledButtonText>
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>Snipers</StyledButtonText>
-                    <StyledButtonText type="text" ghost className={styles.weaponsButtons}>Heavy</StyledButtonText>
-                </Col>
-            </Row>
-            <Row className="" style={{paddingTop:"10px"}}>
-                <Col xs={24} className="">
-                    <AliceCarousel {...carousel}>
-                        <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
-                        <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
-                        <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
-                        <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
-                        <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
-                    </AliceCarousel>
-                </Col>
-            </Row>  
+                <WeaponsCategories/>
+                <Row className="" style={{paddingTop:"10px"}}>
+                    <Col xs={24} className="">
+                        <AliceCarousel {...carousel}>
+                            <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
+                            <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
+                            <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
+                            <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
+                            <StyledCol style={{borderRadius:"15px",marginLeft:"10px"}}><h1>Vandal</h1><h1>Vandal</h1></StyledCol>
+                        </AliceCarousel>
+                    </Col>
+                </Row>  
         </Layout>
         );
+    } else {
+        return <div>Loading...</div>;
     }
 }
 
