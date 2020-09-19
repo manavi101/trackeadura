@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {Row,Col} from 'antd';
 import {ThemeContext} from 'styled-components';
 import StyledButtonText from '../UI/themed-components/ButtonText';
+import Loading from '../UI/themed-components/Loading';
 import styles from './Weapons.module.css';
 
 
@@ -12,7 +13,7 @@ const WeaponsCategories = () =>{
 
     const themeContext = useContext(ThemeContext);
     const WeaponsData = useSelector(state => state.weaponsReducer.weaponsData);
-
+    
     useEffect(()=>{
             /*console.log(WeaponsData)
         const groupByKey = (list, key) => list.reduce((hash, obj) => ({...hash, [obj[key]]:( hash[obj[key]] || [] ).concat(obj)}), {})
@@ -26,6 +27,7 @@ const WeaponsCategories = () =>{
                     return a.indexOf(e) === i;
                 })
             
+           
             setCategories(aux)
             setisLoaded(true)
     },[WeaponsData])
@@ -43,7 +45,7 @@ const WeaponsCategories = () =>{
             </Row>
         );
     }else{
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
 }
 

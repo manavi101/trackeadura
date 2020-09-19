@@ -9,6 +9,7 @@ import StyledButtonText from '../UI/themed-components/ButtonText';
 import WeaponsCategories from './categories.js';
 import styles from './Weapons.module.css';
 import {setweaponsData} from '../../actions/index';
+import Loading from '../UI/themed-components/Loading';
 
 
   const Weapons = () => {
@@ -74,7 +75,7 @@ import {setweaponsData} from '../../actions/index';
         </Layout>
         );
     } else {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
 }
 

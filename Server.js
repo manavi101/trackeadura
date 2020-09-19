@@ -1,13 +1,13 @@
+require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+const mongodb = require('MongoDB')
 const app = express();
-
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/revburger`);
-
+//mongoose.Promise = global.Promise;
+mongoose.connect(process.env.DB_MONGODB,{ useNewUrlParser: true });
+let db = mongoose.connect
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
