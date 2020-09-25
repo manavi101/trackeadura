@@ -1,5 +1,6 @@
 import React,{useContext,useState,useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {Row,Col} from 'antd';
 import {ThemeContext} from 'styled-components';
 import StyledButtonText from '../UI/themed-components/ButtonText';
@@ -19,17 +20,17 @@ const WeaponsCategories = () =>{
         const groupByKey = (list, key) => list.reduce((hash, obj) => ({...hash, [obj[key]]:( hash[obj[key]] || [] ).concat(obj)}), {})
         categories = groupByKey(WeaponsData,"category");
         console.log(categories)*/
-            const aux = WeaponsData
-                .map((e)=>{
-                    return e.category 
-                })
-                .filter((e,i,a)=>{
-                    return a.indexOf(e) === i;
-                })
-            
-           
-            setCategories(aux)
-            setisLoaded(true)
+        const aux = WeaponsData
+            .map((e)=>{
+                return e.category 
+            })
+            .filter((e,i,a)=>{
+                return a.indexOf(e) === i;
+            })           
+        
+        setCategories(aux)
+        setisLoaded(true)
+        console.log(WeaponsData)
     },[WeaponsData])
 
     if(isLoaded){
@@ -37,8 +38,8 @@ const WeaponsCategories = () =>{
             <Row style={{backgroundColor:themeContext.secondaryBackground,textAlign:"center",padding:"10px"}}>
                 <Col xs={24} className="">
                     { 
-                        categories.map((e)=>{
-                            return <StyledButtonText type="text" ghost className={styles.categoriesButtons}>{e}</StyledButtonText>
+                        categories.map((e)=>{ 
+                            return <Link to={"/Weapons/"+e} ><StyledButtonText type="text" ghost className={styles.categoriesButtons}>{e}</StyledButtonText></Link>
                         })
                     }
                 </Col>

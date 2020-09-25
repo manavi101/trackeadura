@@ -37,9 +37,9 @@ const Routes = ({location}) => {
           {exludeHeaderPath.indexOf(location.pathname) < 0 && <Header themes={themeName} changeTheme={changeTheme}/>}
           <GlobalStyle/>
           <Route exact path='/' component={Home}  />
-          <Route exact path='/profile/:userId/:tagLine' component={Profile} setShowHeader={true}/>
-          <Route exact path='/Weapons' component={Weapons} setShowHeader={true}/>
-          <Route exact path='/canvas' component={Canvas} setShowHeader={true}/>
+          <Route exact path='/profile/:userId/:tagLine' component={Profile} />
+          <Route path='/Weapons/:selectedCategorie?/:selectedWeapon?' strict={false} exact={false} component={Weapons} />
+          <Route exact path='/canvas' component={Canvas} />
         </Background>
       </ThemeProvider>   
   );
