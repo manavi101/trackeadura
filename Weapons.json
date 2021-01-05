@@ -1,6 +1,6 @@
 [
     {
-        "id":1,
+        "_id":"29a0cfab-485b-f5d5-779a-b59f85e204a8",
         "name":"Classic",
         "category":"Sidearms",
         "firemode":"Semi-Automatic",
@@ -11,10 +11,26 @@
         "wallpen":"Low",
         "magazine":12,
         "price":0,
-        "img":"classic-model.png"
+        "img":"classic-model.png",
+        "damage":[
+            {
+                "order":1,
+                "distance":"0-30M",
+                "head":78,
+                "body":26,
+                "legs":22
+            },
+            {
+                "order":2,
+                "distance":"30-50M",
+                "head":66,
+                "body":22,
+                "legs":18
+            }
+        ]
     },
     {
-        "id":2,
+        "_id":"42da8ccc-40d5-affc-beec-15aa47b42eda",
         "name":"Shorty",
         "category":"Sidearms",
         "firemode":"Semi-Automatic",
@@ -25,10 +41,33 @@
         "wallpen":"Low",
         "magazine":2,
         "price":200,
-        "img":"shorty-model.png"
+        "img":"shorty-model.png",
+        "damage":[ 
+            {
+                "order":1,
+                "distance":"0-9M",
+                "head":36,
+                "body":12,
+                "legs":10
+            },
+            {
+                "order":2,
+                "distance":"9-15M",
+                "head":24,
+                "body":8,
+                "legs":6
+            },
+            {
+                "order":3,
+                "distance":"15-50M",
+                "head":9,
+                "body":3,
+                "legs":2
+            }
+        ]
     },
     {
-        "id":3,
+        "_id":"44d4e95c-4157-0037-81b2-17841bf2e8e3",
         "name":"Frenzy",
         "category":"Sidearms",
         "firemode":"Full-Automatic",
@@ -39,10 +78,26 @@
         "wallpen":"Low",
         "magazine":13,
         "price":400,
-        "img":"frenzy-model.png"
+        "img":"frenzy-model.png",
+        "damage":[ 
+            {
+                "order":1,
+                "distance":"0-20M",
+                "head":78,
+                "body":26,
+                "legs":22
+            },
+            {
+                "order":2,
+                "distance":"20-50M",
+                "head":63,
+                "body":21,
+                "legs":17
+            }
+        ]
     },
     {
-        "id":4,
+        "_id":"1baa85b4-4c70-1284-64bb-6481dfc3bb4e",
         "name":"Ghost",
         "category":"Sidearms",
         "firemode":"Semi-Automatic",
@@ -53,10 +108,26 @@
         "wallpen":"Medium",
         "magazine":15,
         "price":500,
-        "img":"ghost-model.png"
+        "img":"ghost-model.png",
+        "damage":[ 
+            {
+                "order":1,
+                "distance":"0-30M",
+                "head":105,
+                "body":30,
+                "legs":26
+            },
+            {
+                "order":2,
+                "distance":"30-50M",
+                "head":88,
+                "body":25,
+                "legs":21
+            }
+        ]
     },
     {
-        "id":5,
+        "_id":"e336c6b8-418d-9340-d77f-7a9e4cfe0702",
         "name":"Sheriff",
         "category":"Sidearms",
         "firemode":"Semi-Automatic",
@@ -67,10 +138,26 @@
         "wallpen":"High",
         "magazine":6,
         "price":800,
-        "img":"sheriff-model.png"
+        "img":"sheriff-model.png",
+        "damage":[
+            {
+                "order":1,
+                "distance":"0-30M",
+                "head":160,
+                "body":55,
+                "legs":47
+            },
+            {
+                "order":2,
+                "distance":"30-50M",
+                "head":145,
+                "body":50,
+                "legs":43
+            }
+        ]
     },
     {
-        "id":6,
+        "_id":"f7e1b454-4ad4-1063-ec0a-159e56b58941",
         "name":"Stinger",
         "category":"SMGs",
         "firemode":"Full-Automatic",
@@ -81,10 +168,26 @@
         "wallpen":"Low",
         "magazine":20,
         "price":1000,
-        "img":"stinger-model.png"
+        "img":"stinger-model.png",
+        "damage":[
+            {
+                "order":1,
+                "distance":"0-20M",
+                "head":67,
+                "body":27,
+                "legs":23
+            },
+            {
+                "order":2,
+                "distance":"20-50M",
+                "head":62,
+                "body":25,
+                "legs":21
+            }
+        ]
     },
     {
-        "id":7,
+        "_id":"462080d1-4035-2937-7c09-27aa2a5c27a7",
         "name":"Spectre",
         "category":"SMGs",
         "firemode":"Full-Automatic",
@@ -95,10 +198,26 @@
         "wallpen":"Low",
         "magazine":30,
         "price":1600,
-        "img":"spectre-model.png"
+        "img":"spectre-model.png",
+        "damage":[
+            {
+                "order":1,
+                "distance":"0-20M",
+                "head":78,
+                "body":26,
+                "legs":22
+            },
+            {
+                "order":2,
+                "distance":"20-50M",
+                "head":66,
+                "body":22,
+                "legs":18
+            }
+        ]
     },
     {
-        "id":8,
+        "_id":"910be174-449b-c412-ab22-d0873436b21b",
         "name":"Bucky",
         "category":"Shotguns",
         "firemode":"Semi-Automatic",
@@ -109,10 +228,33 @@
         "wallpen":"Low",
         "magazine":5,
         "price":900,
-        "img":"bucky-model.png"
+        "img":"bucky-model.png",
+        "damage":[    
+            {
+                "order":1,
+                "distance":"0-8M",
+                "head":44,
+                "body":22,
+                "legs":19
+            },
+            {
+                "order":2,
+                "distance":"8-12M",
+                "head":34,
+                "body":17,
+                "legs":14
+            },
+            {
+                "order":3,
+                "distance":"12-50M",
+                "head":18,
+                "body":9,
+                "legs":8
+            }
+        ]
     },
     {
-        "id":9,
+        "_id":"ec845bf4-4f79-ddda-a3da-0db3774b2794",
         "name":"Judge",
         "category":"Shotguns",
         "firemode":"Full-Automatic",
@@ -123,10 +265,33 @@
         "wallpen":"Medium",
         "magazine":7,
         "price":1600,
-        "img":"judge-model.png"
+        "img":"judge-model.png",
+        "damage":[
+            {
+                "order":1,
+                "distance":"0-10M",
+                "head":34,
+                "body":17,
+                "legs":14
+            },
+            {
+                "order":22,
+                "distance":"10-15M",
+                "head":26,
+                "body":13,
+                "legs":11
+            },
+            {
+                "order":3,
+                "distance":"15-50M",
+                "head":20,
+                "body":10,
+                "legs":9
+            }
+        ]
     },
     {
-        "id":10,
+        "_id":"ae3de142-4d85-2547-dd26-4e90bed35cf7",
         "name":"Bulldog",
         "category":"Rifles",
         "firemode":"Full-Automatic",
@@ -137,10 +302,17 @@
         "wallpen":"Medium",
         "magazine":24,
         "price":2100,
-        "img":"bulldog-model.png"
+        "img":"bulldog-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-50M",
+            "head":116,
+            "body":36,
+            "legs":30
+        }]
     },
     {
-        "id":11,
+        "_id":"4ade7faa-4cf1-8376-95ef-39884480959b",
         "name":"Guardian",
         "category":"Rifles",
         "firemode":"Semi-Automatic",
@@ -151,10 +323,17 @@
         "wallpen":"High",
         "magazine":12,
         "price":2500,
-        "img":"guardian-model.png"
+        "img":"guardian-model.png",
+        "damage":[   {
+            "order":1,
+            "distance":"0-50M",
+            "head":195,
+            "body":65,
+            "legs":49
+        }]
     },
     {
-        "id":12,
+        "_id":"ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a",
         "name":"Phantom",
         "category":"Rifles",
         "firemode":"Full-Automatic",
@@ -165,10 +344,31 @@
         "wallpen":"Medium",
         "magazine":30,
         "price":2900,
-        "img":"phantom-model.png"
+        "img":"phantom-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-15M",
+            "head":156,
+            "body":39,
+            "legs":33
+        },
+        {
+            "order":2,
+            "distance":"15-30M",
+            "head":140,
+            "body":35,
+            "legs":30
+        },
+        {
+            "order":3,
+            "distance":"30-50M",
+            "head":124,
+            "body":31,
+            "legs":26
+        }]
     },
     {
-        "id":13,
+        "_id":"9c82e19d-4575-0200-1a81-3eacf00cf872",
         "name":"Vandal",
         "category":"Rifles",
         "firemode":"Full-Automatic",
@@ -179,10 +379,17 @@
         "wallpen":"Medium",
         "magazine":30,
         "price":2900,
-        "img":"vandal-model.png"
+        "img":"vandal-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-50M",
+            "head":156,
+            "body":39,
+            "legs":33
+        }]
     },
     {
-        "id":14,
+        "_id":"c4883e50-4494-202c-3ec3-6b8a9284f00b",
         "name":"Marshal",
         "category":"Snipers",
         "firemode":"Semi-Automatic",
@@ -193,10 +400,17 @@
         "wallpen":"Medium",
         "magazine":5,
         "price":1100,
-        "img":"marshal-model.png"
+        "img":"marshal-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-50M",
+            "head":202,
+            "body":101,
+            "legs":85
+        }]
     },
     {
-        "id":15,
+        "_id":"a03b24d3-4319-996d-0f8c-94bbfba1dfc7",
         "name":"Operator",
         "category":"Snipers",
         "firemode":"Semi-Automatic",
@@ -207,11 +421,18 @@
         "wallpen":"High",
         "magazine":5,
         "price":4500,
-        "img":"operator-model.png"
+        "img":"operator-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-50M",
+            "head":255,
+            "body":150,
+            "legs":127
+        }]
         
     },
     {
-        "id":16,
+        "_id":"55d8a0f4-4274-ca67-fe2c-06ab45efdf58",
         "name":"Ares",
         "category":"Heavy",
         "firemode":"Full-Automatic",
@@ -222,10 +443,24 @@
         "wallpen":"High",
         "magazine":50,
         "price":1600,
-        "img":"ares-model.png"
+        "img":"ares-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-30M",
+            "head":72,
+            "body":30,
+            "legs":25
+        },
+        {
+            "order":2,
+            "distance":"30-50M",
+            "head":67,
+            "body":28,
+            "legs":23
+        }]
     },
     {
-        "id":17,
+        "_id":"63e6c2b6-4a8e-869c-3d4c-e38355226584",
         "name":"Odin",
         "category":"Heavy",
         "firemode":"Full-Automatic",
@@ -236,6 +471,30 @@
         "wallpen":"High",
         "magazine":100,
         "price":3200,
-        "img":"odin-model.png"
+        "img":"odin-model.png",
+        "damage":[{
+            "order":1,
+            "distance":"0-30M",
+            "head":95,
+            "body":38,
+            "legs":32
+        },
+        {
+            "order":2,
+            "distance":"30-50M",
+            "head":77,
+            "body":31,
+            "legs":26
+        }]
+    },
+    {
+        "_id":"3de32920-4a8f-0499-7740-648a5bf95470",
+        "name":"Golden Gun",
+        "hidden":true
+    },
+    {
+        "_id":"0afb2636-4093-c63b-4ef1-1e97966e2a3e",
+        "name":"Spike",
+        "hidden":true
     }
 ]
