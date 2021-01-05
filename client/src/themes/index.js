@@ -1,5 +1,4 @@
-import basic from './basic';
-import dark from './dark';
-import light from './light';
+import darkTheme from './dark';
+import lightTheme from './light';
 
-export { basic,dark,light };
+export { darkTheme, lightTheme };

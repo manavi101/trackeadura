@@ -1,10 +1,14 @@
-import basic from './basic';
+import {createMuiTheme} from '@material-ui/core/styles';
+import { deepPurple } from '@material-ui/core/colors';
 
-export default {
-    ...basic,
-    background:'#111',
-    color:'#eee',
-    color2:'#ccc',
-    backgroundColor:'#333',
-    secondaryBackground:'#222'
-}
+
+const darkTheme = createMuiTheme({
+    palette:{
+        type:'dark',
+        primary: deepPurple
+    },
+    
+})
+
+
+export default darkTheme;

@@ -1,49 +1,56 @@
-import React,{useState,useEffect} from 'react';
-import 'antd/dist/antd.css';
-import {useDispatch,useSelector} from 'react-redux';
-import {Route,withRouter} from 'react-router-dom';
-import { ThemeProvider ,createGlobalStyle} from 'styled-components';
-import THEMES from './constants/themes';
-import { getTheme } from './utils/getTheme';
-import Background from './components/UI/themed-components/background';
-
-//SCREENS
-import Profile from './components/Profile';
-import Home from './components/Home';
-import Header from './components/Header';
-import Weapons from './components/Weapons';
-import Canvas from './components/Canvas';
+import React, { useState } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import {
+  Paper,
+} from '@material-ui/core';
+import {Route,Switch} from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
+import useStyles from './routeStyles';
+import { darkTheme, lightTheme } from './themes';
 
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${props => props.theme.background}
-    color: ${props => props.theme.color}
-  }
-  `;
+//PAGES
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 
-const Routes = ({location}) => {
-  const [themeName, setThemeName] = useState(THEMES.dark)
+//UI
+import Appbar from './components/AppBar';
+import Error from './components/Error.js';
+
+
+const Routes = props => {
+
+  const classes = useStyles();
+  const [open, setOpen] = useState(true);
+  const [isDarkTheme, setDarkTheme] = useState(false)
 
   const changeTheme = () => {
-    setThemeName(themeName == THEMES.dark ? THEMES.light : THEMES.dark)
+    setDarkTheme(!isDarkTheme)
   }
-  console.log(themeName)
-  const exludeHeaderPath = ['/']
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
-  return (
-     <ThemeProvider theme={getTheme(themeName)}>
-        <Background>
-          {exludeHeaderPath.indexOf(location.pathname) < 0 && <Header themes={themeName} changeTheme={changeTheme}/>}
-          <GlobalStyle/>
-          <Route exact path='/' component={Home}  />
-          <Route exact path='/profile/:userId/:tagLine' component={Profile} />
-          <Route path='/Weapons/:selectedCategorie?/:selectedWeapon?' strict={false} exact={false} component={Weapons} />
-          <Route exact path='/canvas' component={Canvas} />
-        </Background>
-      </ThemeProvider>   
-  );
+
+  return(
+    <ThemeProvider theme={ isDarkTheme ? darkTheme : lightTheme }>
+    <CssBaseline />
+    {/* <Paper className={classes.root}> */}
+      <Appbar open={open} handleDrawerOpen={handleDrawerOpen} isDarkTheme={isDarkTheme} changeTheme={changeTheme}/>
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+            <Switch>
+              <Route exact path='/' component={Home}/>
+              <Route exact path='/profile/:user' component={Profile}/>
+              <Route component={()=> <Error errorCode="404"/>}/>
+            </Switch>
+      </main>
+    {/* </Paper> */}
+  </ThemeProvider>
+  )
 }
 
-export default withRouter(Routes);
-
+export default Routes;
