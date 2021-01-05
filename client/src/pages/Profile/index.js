@@ -48,37 +48,46 @@ const Profile = props => {
         />
         <CardContent>
           <Box>
-            <Grid container direction="row" alignItems="center" spacing={2} style={{paddingBottom:'16px'}}>
+            <Grid container direction="row" alignItems="center" spacing={4} style={{padding:'8px', paddingBottom:'24px'}}>
               <Grid item>
-                <Avatar/>
+                <Avatar src={process.env.PUBLIC_URL + '/images/profile/generic-profile-icon.png'} className={classes.userImage}/>
               </Grid>
               <Grid item>
-                <Typography>parradura#LAS</Typography>
+                <Typography className={classes.userName}>parradura#LAS</Typography>
+              </Grid>
+            </Grid>
+            <Divider/>
+            <Grid container className={classes.rankContainer} direction="row" spacing={2}>
+              <Grid item>
+                <Avatar src={process.env.PUBLIC_URL + '/images/ranks/immortal3.svg'} className={classes.rankImage}/>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.rankName}>Immortal 3</Typography>
               </Grid>
             </Grid>
           </Box>
           <Divider/>
-          <Grid container direction="row" style={{paddingTop:'16px'}}>
-            <Grid container xs={6} spacing={2}>
+          <Grid container direction="row" style={{paddingTop:'16px'}} spacing={4}>
+            <Grid item container xs={6} spacing={2}>
               {stats.map(e => (
-                <Grid item container direction="row" spacing={2}>
-                  <Grid item>
-                    <Typography>{e.title}</Typography>
+                  <Grid item container direction="row" spacing={2}>
+                    <Grid item xs={8}>
+                      <Typography className={classes.statTitle}>{e.title}</Typography>
+                    </Grid>
+                    <Grid item xs={4} justify="flex-end" style={{display:'flex'}}>
+                      <Typography className={classes.statValue}>{e.value}</Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item>
-                    <Typography>{e.value}</Typography>
-                  </Grid>
-                </Grid>
-              ))}
+                ))}
             </Grid>
-            <Grid container xs={6} spacing={2}>
+            <Grid item container xs={6} spacing={2}>
               {stats.map(e => (
                 <Grid item container direction="row" spacing={2}>
-                  <Grid item>
-                    <Typography>{e.title}</Typography>
+                  <Grid item xs={8}>
+                    <Typography className={classes.statTitle}>{e.title}</Typography>
                   </Grid>
-                  <Grid item>
-                    <Typography>{e.value}</Typography>
+                  <Grid item xs={4} justify="flex-end" style={{display:'flex'}}>
+                    <Typography className={classes.statValue}>{e.value}</Typography>
                   </Grid>
                 </Grid>
               ))}

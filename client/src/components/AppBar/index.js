@@ -31,7 +31,7 @@ const AppBar = props => {
       <MUIAppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)} color={"primary"}>
         <Toolbar className={classes.toolbar}>
           <Typography component="h1" variant="h4" color="inherit" noWrap className={classes.title}>
-            <Link underline="none" href="/" >
+            <Link underline="none" href="/"  className={classes.link}>
               TRACKEADURA
             </Link>
           </Typography>

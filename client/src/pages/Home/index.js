@@ -8,7 +8,6 @@ import { Input, Button } from '../../components/FormControls';
 import { useForm, Form } from '../../utils/useForm';
 import useStyles from './styles';
 import { useHistory } from 'react-router-dom';
-import { GridOnOutlined } from '@material-ui/icons';
 
 const initialValues = {
   username:'',

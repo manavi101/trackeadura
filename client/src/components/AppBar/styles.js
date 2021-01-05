@@ -16,9 +16,11 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+  },
+  link: {
     color:theme.palette.type == 'dark' ? '#fff' : theme.palette.primary.main,
     fontWeight:'bold',
-  },
+  }
 }))
 
 export default useStyles;
