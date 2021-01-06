@@ -10,7 +10,7 @@ const getWeapons = async (req, res, next) => {
     try {
       let weaponById = await Weapon.findById(id);
       let weaponByName = await Weapon.find({name:id})
-      if(!weaponById && !weaponByName){
+      if(!weaponById && weaponByName.length === 0){
         return next(
           new HttpError('No se ha encontrado ningún arma con el id especificado.',404)
         );
