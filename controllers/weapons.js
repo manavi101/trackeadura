@@ -8,11 +8,20 @@ const getWeapons = async (req, res, next) => {
   const { id } = req.params;
   if(id){
     try {
-      let weapon = await Weapon.findById(id);
-      res.status(200).json(weapon)
+      let weaponById = await Weapon.findById(id);
+      let weaponByName = await Weapon.find({name:id})
+      if(!weaponById && !weaponByName){
+        return next(
+          new HttpError('No se ha encontrado ningún arma con el id especificado.',404)
+        );
+      }
+      if(weaponById)
+        res.status(200).json(weaponById)
+      if(weaponByName)
+        res.status(200).json(weaponByName)
     } catch (error) {
       return next(
-        new HttpError('No se ha encontrado ningún arma con el id especificado.',404)
+        new HttpError('Ha ocurrido un error al obtener el arma.',400)
       );
     }
   } else {
