@@ -15,7 +15,15 @@ const WeaponSchema = new Schema({
     price:          {type: Number, required:false},
     img:            {type: String, required:false},
     hidden:         {type: Boolean, default:false},
-    damage:         [{order:Number,distance:String,head:Number,body:Number,legs:Number}]
+    damage:         [{
+                        order:Number,
+                        distance:String,
+                        head:Number,
+                        body:Number,
+                        legs:Number
+                    }]
 })
 
-mongoose.model('Weapon', WeaponSchema);
+const Weapon = mongoose.model('Weapon', WeaponSchema);
+
+module.exports = Weapon;
