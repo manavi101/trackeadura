@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const WeaponSchema = new Schema({
-    _id:            {type: String, required:true, unique:true},
+    _id:            {type: String, required:true},
     name:           {type: String, required:true, unique:true},
     category:       {type: String, required:false},
     firemode:       {type: String, required:false},
