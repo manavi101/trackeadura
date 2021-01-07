@@ -16,11 +16,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect(process.env.DB_MONGODB,{ useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology:true });
 
-//Para produccion
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+//Production only
+if(process.env.NODE_ENV==="production"){
+  app.use(express.static(path.join(__dirname, 'build')));
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+}
 
 //ROUTERS
 const weaponsRouter = require('./routes/weapons');

@@ -1,12 +1,13 @@
 const express = require('express');
 const weaponsControllers = require('../controllers/weapons.js')
 const { 
-  getWeapons
+  getWeapons,
+  getWeapon
 } = weaponsControllers;
 
 const router = express.Router();
 
 router.get('/weapons', getWeapons)
-router.get('/weapons/:id', getWeapons)
+router.get('/weapons/:field/:value', getWeapon)
 
 module.exports = router;
