@@ -10,7 +10,7 @@ const getWeapons = async (req, res, next) => {
     res.status(200).json(weapon)
   } catch (error) {
     return next(
-      new HttpError('Ha ocurrido un error al obtener la lista de armas.',400)
+      new HttpError('An error ocurred :'+error,400)
     );
   }
 }
@@ -28,12 +28,12 @@ const getWeapon = async (req, res, next) => {
         res.status(200).json(weapon);
       }else{
         return next(
-          new HttpError('No se ha encontrado ningún arma con '+field+' = '+value,404)
+          new HttpError('There isn´t a weapon with '+field+' = '+value,404)
         );
       }
     } catch (error) {
       return next(
-        new HttpError('Error al realizar la consulta :'+error,400)
+        new HttpError('An error ocurred :'+error,400)
       );
     }
   }
