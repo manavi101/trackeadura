@@ -41,24 +41,18 @@ const Profile = props => {
   const userBox = props => {
     return(
       <Card>
-        <CardMedia
-          className={classes.banner}
-          image="https://esports.as.com/2020/06/04/valorant/grupos-Twitch-Rivals-Valorant_1361283862_403051_1440x600.jpg"
-          title="banner"
-        />
+          <Grid container direction="row" alignItems="center" className={classes.userContainer}>
+            <Grid item style={{padding:12}}>
+              <Avatar src={process.env.PUBLIC_URL + '/images/profile/generic-profile-icon.png'} className={classes.userImage}/>
+            </Grid>
+            <Grid item>
+              <Typography className={classes.userName}>parradura#LAS</Typography>
+            </Grid>
+          </Grid>
         <CardContent>
           <Box>
-            <Grid container direction="row" alignItems="center" spacing={4} style={{padding:'8px', paddingBottom:'24px'}}>
-              <Grid item>
-                <Avatar src={process.env.PUBLIC_URL + '/images/profile/generic-profile-icon.png'} className={classes.userImage}/>
-              </Grid>
-              <Grid item>
-                <Typography className={classes.userName}>parradura#LAS</Typography>
-              </Grid>
-            </Grid>
-            <Divider/>
-            <Grid container className={classes.rankContainer} direction="row" spacing={2}>
-              <Grid item>
+            <Grid container className={classes.rankContainer} direction="row">
+              <Grid item style={{padding:12}}>
                 <Avatar src={process.env.PUBLIC_URL + '/images/ranks/immortal3.svg'} className={classes.rankImage}/>
               </Grid>
               <Grid item>
@@ -98,6 +92,74 @@ const Profile = props => {
     )
   }
 
+  const mostUsedAgents = props => {
+    return(
+      <Grid item>
+        <Card className={classes.mostUsedAgentsContainer}>
+          <Grid item xs={3} className={classes.mostUsedAgentsTitleContainer}>
+            <Typography align="center" className={classes.mostUsedAgentsTitle}>PERSONAJES MAS JUGADOS</Typography>
+          </Grid>
+          <Grid item xs={9} container className={classes.agentsContainer}>
+              <Grid item className={classes.agent}>
+                <Avatar src={process.env.PUBLIC_URL + '/images/agents/jett-concept-headshot.png'} className={classes.userImage}/>
+                <Typography className={classes.agentName}>Jett</Typography>
+              </Grid>
+              <Grid item className={classes.agent}>
+                <Avatar src={process.env.PUBLIC_URL + '/images/agents/jett-concept-headshot.png'} className={classes.userImage}/>
+                <Typography className={classes.agentName}>Jett</Typography>
+              </Grid>
+              <Grid item className={classes.agent}>
+                <Avatar src={process.env.PUBLIC_URL + '/images/agents/jett-concept-headshot.png'} className={classes.userImage}/>
+                <Typography className={classes.agentName}>Jett</Typography>
+              </Grid>
+          </Grid>
+        </Card>
+      </Grid>
+    );
+  }
+
+  const matchHistory = props => {
+    return(
+      <Grid item>
+        <Card>
+          <Grid item className={classes.matchHistoryTitleContainer}>
+            <Typography align="center" className={classes.matchHistoryTitle}>HISTORIAL PARTIDAS</Typography>
+          </Grid>
+          <CardContent>
+              <Grid container direction="column" spacing={2} style={{paddingTop:'24px'}}>
+                {(()=>{
+                  let matches = []
+                  for(let i=0; i<50; i++){
+                    matches.push(
+                      matchItem()
+                    )
+                    matches.push(<Divider/>)
+                  }
+                  return matches;
+                })()}
+              </Grid>
+          </CardContent>
+        </Card>
+      </Grid>
+    );
+  }
+
+  const matchItem = props => {
+    return(
+      <Grid item container direction="row" alignItems="center">
+        <Grid item xs={2}>
+          <Avatar variant="rounded" src={process.env.PUBLIC_URL + '/images/maps/map-art-haven.jpg'} className={classes.mapImage}/>
+        </Grid>
+        <Grid item xs={10} className={classes.mapItemStatsContainer}>
+          <Typography>Bind</Typography>
+          <Typography>13-10</Typography>
+          <Typography>2.48KD</Typography>
+          <Typography>328</Typography>
+        </Grid>
+      </Grid>
+    );
+  }
+
   return(
     <div className={classes.root}>
       <Grid container>
@@ -109,39 +171,8 @@ const Profile = props => {
         <Grid item container xs={9}>
           <Box height="100vh" width="100%" className={classes.cardRoot}>
             <Grid container direction="column" spacing={2}>
-              <Grid item>
-                <Card>
-                  <CardContent>
-                    <Typography>PERSONAJES MAS JUGADOS</Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item>
-                <Card>
-                  <CardContent>
-                    <Typography>HISTORIAL PARTIDAS</Typography>
-                      <Grid container direction="column" spacing={2} style={{paddingTop:'24px'}}>
-                        {(()=>{
-                          let matches = []
-                          for(let i=0; i<50; i++){
-                            matches.push(
-                              <Grid item container direction="row" spacing={2} alignItems="center">
-                                <Grid item>
-                                  <Avatar/>
-                                </Grid>
-                                <Grid item>
-                                  <Typography>Bind | 13-10 | kda:3.50</Typography>
-                                </Grid>
-                              </Grid>
-                            )
-                            matches.push(<Divider/>)
-                          }
-                          return matches;
-                        })()}
-                      </Grid>
-                  </CardContent>
-                </Card>
-              </Grid>
+              {mostUsedAgents()}
+              {matchHistory()}
             </Grid>
           </Box>
         </Grid>
