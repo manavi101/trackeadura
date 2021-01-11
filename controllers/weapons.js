@@ -10,7 +10,7 @@ const getWeapons = async (req, res, next) => {
     res.status(200).json(weapon)
   } catch (error) {
     return next(
-      new HttpError('An error ocurred :'+error,400)
+      new HttpError('An error ocurred :'+error,500)
     );
   }
 }
@@ -33,7 +33,7 @@ const getWeapon = async (req, res, next) => {
       }
     } catch (error) {
       return next(
-        new HttpError('An error ocurred :'+error,400)
+        new HttpError('An error ocurred :'+error,500)
       );
     }
   }
