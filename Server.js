@@ -26,9 +26,9 @@ if(process.env.NODE_ENV==="production"){
 
 //ROUTERS
 const weaponsRouter = require('./routes/weapons');
-
+const usersRouter = require('./routes/users');
 app.use('/api', weaponsRouter);
-
+app.use('/api', usersRouter);
 
 app.use((req, res, next) => {
   const error = new HttpError('No se ha podido encontrar la ruta.', 404)
