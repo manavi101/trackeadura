@@ -14,7 +14,7 @@ const getUser = async (req, res, next) => {
           res.status(200).json(user);
       }else{
         //if not then search in external api
-          await axios.get('https://valorant.iesdev.com/player/'+name+'-'+tag)
+          await axios.get(process.env.EXTERNAL_API+'player/'+name+'-'+tag)
           .then(function(response){
             //if exists is saved in db for future searches
             user = response.data
